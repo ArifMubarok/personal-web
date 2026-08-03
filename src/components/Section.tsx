@@ -1,0 +1,16 @@
+export default function Section({
+  id,
+  title,
+  children,
+}: {
+  id: string;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section id={id} className="mx-auto max-w-4xl px-6 py-16">
+      <h2 className="text-2xl font-bold tracking-tight">{title}</h2>
+      <div className="mt-8">{children}</div>
+    </section>
+  );
+}
