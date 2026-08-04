@@ -9,15 +9,15 @@ export const basicInfo = {
 
 export const bio = {
   short:
-    "Software Engineer Team Lead with a backend-leaning fullstack background, building retail systems — POS, ERP, and Loyalty platforms — used by hundreds of thousands of active customers.",
+    "Software Engineer Team Lead specializing in Malaysia's IRB-compliant e-Invoice integration, alongside retail systems — POS, ERP, and Loyalty platforms — used by hundreds of thousands of active customers.",
   long:
-    "I'm a Software Engineer Team Lead based in Jakarta, currently leading a team of up to 3 engineers across concurrent retail projects spanning POS, ERP (Merchandising & HRIS), and Loyalty solutions for clients in Indonesia. I stay hands-on in development while managing team workload, task distribution, and cross-functional alignment with Operations and Project Management. My background is backend-focused fullstack engineering — from digital library platforms handling large file uploads, to compliance-driven integrations like Malaysia's e-Invoice (IRB), to POS systems serving real retail operations at scale.",
+    "I'm a Software Engineer Team Lead based in Jakarta, currently leading a team of up to 3 engineers across concurrent retail projects spanning POS, ERP (Merchandising & HRIS), and Loyalty solutions for clients in Indonesia and Malaysia. A core focus of my work is Malaysia's IRB-compliant e-Invoice integration — from processing structured data files to architecting a bulk submission pipeline that batches up to 50 invoices per request, improving throughput while meeting strict regulatory constraints. I stay hands-on in development while managing team workload, task distribution, and cross-functional alignment with Operations and Project Management. My broader background spans backend-focused fullstack engineering, from digital library platforms handling large file uploads to POS systems serving real retail operations at scale.",
 };
 
 export type Skill = { category: string; items: string[] };
 
 export const skills: Skill[] = [
-  { category: "Languages", items: ["Indonesian (Native)", "English (Passive)"] },
+  { category: "Languages", items: ["Indonesian (Native)", "English (Work Proficiency)"] },
   {
     category: "Frameworks / Libraries",
     items: ["Laravel", "Angular (TypeScript)", "NestJS", "Ionic", "Docker", "TypeORM", "MySQL"],
@@ -25,62 +25,94 @@ export const skills: Skill[] = [
   { category: "Tools / Platforms", items: ["Cloudflare", "VPS"] },
 ];
 
-export type Experience = {
-  company: string;
+export type ExperienceRole = {
   role: string;
   duration: string;
-  location: string;
   description: string[];
+  achievements?: string[];
+  techStack?: string[];
 };
 
-export const experience: Experience[] = [
+export type ExperienceEntry = {
+  company: string;
+  location: string;
+  roles: ExperienceRole[];
+};
+
+export const experience: ExperienceEntry[] = [
   {
     company: "IGCY SG",
-    role: "Software Engineer Team Lead",
-    duration: "September 2025 - Present",
     location: "Jakarta Selatan",
-    description: [
-      "Led and managed a development team of up to 3 members across multiple concurrent retail projects, including POS, ERP (Merchandising & HRIS), and Loyalty solutions for Indonesia-based clients",
-      "Managed the Loyalty program for Indonesia-based clients, supporting 400k+ active customers",
-      "Managed Malaysia e-Invoice integration projects, ensuring IRB-compliant data processing from structured data files",
-      "Remained hands-on in development while overseeing team workload, task distribution, and deadline adherence",
-      "Collaborated cross-functionally with Operations and Project Management teams to align deliverables with client requirements and timelines",
-    ],
-  },
-  {
-    company: "IGCY SG",
-    role: "Software Engineer",
-    duration: "October 2024 - September 2025",
-    location: "Jakarta Selatan",
-    description: [
-      "Developed and maintained retail-focused solutions, including POS systems, ERP modules, and Loyalty programs for Indonesia-based clients",
-      "Handled Malaysia e-Invoice integration with IRB-compliant data processing from structured data files",
-      "Worked across both frontend and backend to deliver full-cycle feature development",
-      "Collaborated with cross-functional teams to gather, implement, and optimize client requirements",
+    roles: [
+      {
+        role: "Software Engineer Team Lead",
+        duration: "September 2025 - Present",
+        description: [
+          "Led and managed a development team of up to 3 members across multiple concurrent retail projects, including POS, ERP (Merchandising & HRIS), and Loyalty solutions for Indonesia-based clients",
+          "Managed the Loyalty program for Indonesia-based clients, supporting 400k+ active customers",
+          "Managed Malaysia e-Invoice integration projects, ensuring IRB-compliant data processing from structured data files",
+          "Remained hands-on in development while overseeing team workload, task distribution, and deadline adherence",
+          "Collaborated cross-functionally with Operations and Project Management teams to align deliverables with client requirements and timelines",
+        ],
+        achievements: [
+          "**Architected and optimized a bulk e-Invoice processing pipeline**, replacing one-by-one IRB submissions with batched requests of **up to 50 invoices**, improving transaction throughput while enforcing API payload and regulatory constraints.",
+          "**Engineered a high-performance reporting pipeline** capable of exporting **6M+ database records in under 10 minutes**, using scalable data retrieval and processing strategies while ensuring complete and consistent datasets.",
+          "**Built and scaled a Loyalty Program serving 400K+ active customers**, designing backend workflows and data-processing mechanisms capable of handling large-scale customer transactions and activity.",
+          "**Led technical execution across the engineering team**, coordinating implementation, resolving technical dependencies, and driving delivery of multiple initiatives **within defined project deadlines**.",
+        ],
+        techStack: ["Ionic", "Angular", "JavaScript", "TypeScript", "NodeJS", "PHP", "Laravel", "MySQL"],
+      },
+      {
+        role: "Software Engineer",
+        duration: "October 2024 - September 2025",
+        description: [
+          "Developed and maintained ERP solutions with a focus on HRIS modules, including attendance and payroll systems tailored to the Malaysian market",
+          "Handled Malaysia e-Invoice integration with IRB-compliant data processing from structured data files",
+          "Worked across both frontend and backend to deliver full-cycle feature development",
+          "Collaborated with cross-functional teams to gather, implement, and optimize client requirements",
+        ],
+        achievements: [
+          "**Engineered the HRIS attendance module** to handle **1,000+ concurrent attendance submissions** with high availability and zero downtime, optimizing backend processing and database operations to maintain system stability during peak traffic.",
+          "**Engineered the HRIS payroll module for Malaysian payroll**, implementing complex country-specific payroll rules and calculations while maintaining accuracy, consistency, and reliability across payroll processing workflows.",
+        ],
+        techStack: ["Ionic", "Angular", "JavaScript", "TypeScript", "NodeJS", "PHP", "Laravel", "MySQL"],
+      },
     ],
   },
   {
     company: "Orbit360",
-    role: "Software Engineer (Backend Focused)",
-    duration: "November 2023 - October 2024",
     location: "Solo, Indonesia",
-    description: [
-      "Built and maintained a digital library platform that manages e-books with large file sizes, ensuring reliable upload, storage, and delivery",
-      "Built API endpoints for frontend consumption across mobile and web",
-      "Documented APIs to support frontend development",
-      "Deployed, secured, and containerized APIs, the frontend web app, and the database using Docker",
+    roles: [
+      {
+        role: "Software Engineer (Backend Focused)",
+        duration: "November 2023 - October 2024",
+        description: [
+          "Built and maintained a digital library platform that manages e-books with large file sizes, ensuring reliable upload, storage, and delivery",
+          "Built API endpoints for frontend consumption across mobile and web",
+          "Documented APIs to support frontend development",
+          "Deployed, secured, and containerized APIs, the frontend web app, and the database using Docker",
+        ],
+        achievements: [
+          "Handled large file uploads with optimized upload times, ensuring fast and reliable delivery of large e-book files.",
+        ],
+        techStack: ["TypeScript (strict mode)", "NodeJS", "NestJS", "Docker", "Cloudflare", "VPS", "Nginx", "PostgreSQL"],
+      },
     ],
   },
   {
-    company: "Orbit360",
-    role: "Software Engineer (Fullstack Focused)",
-    duration: "November 2023 - October 2024",
+    company: "CV. Gudang Media Perkasa",
     location: "Solo, Indonesia",
-    description: [
-      "Implemented a web-based Point of Sales (POS) system",
-      "Built and secured APIs for the frontend side",
-      "Consumed APIs from the backend side",
-      "Worked with Git for version control",
+    roles: [
+      {
+        role: "Software Engineer (Intern)",
+        duration: "November 2023 - October 2024",
+        description: [
+          "Implemented a web-based Point of Sales (POS) system",
+          "Built and secured APIs for the frontend side",
+          "Consumed APIs from the backend side",
+          "Worked with Git for version control",
+        ],
+      },
     ],
   },
 ];
@@ -134,5 +166,5 @@ export const certifications: Certification[] = [
 export const socials = {
   github: "https://github.com/ArifMubarok",
   linkedin: "https://www.linkedin.com/in/arifrm",
-  resume: "https://drive.google.com/file/d/1SLIfzLn9F5WltuV5yjZdE18i849H5F15/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1j4Q5Hqlpl3C97o4Vmxjd-DA5RwfbUp0s/view?usp=sharing",
 };
