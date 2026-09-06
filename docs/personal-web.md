@@ -109,7 +109,7 @@ Repeat this block for each project.
 - GitHub: https://github.com/ArifMubarok
 - LinkedIn: https://www.linkedin.com/in/arifrm
 - Twitter/X: i doesn't have
-- Portfolio/Resume link: here's my resume https://drive.google.com/file/d/1j4Q5Hqlpl3C97o4Vmxjd-DA5RwfbUp0s/view?usp=sharing
+- Portfolio/Resume link: here's my resume https://drive.google.com/file/d/144VchcnizTcmNKqXRiMdTn-9iUKko6uJ/view?usp=sharing
 - Other:
 
 ## 9. Contact / Call to Action
