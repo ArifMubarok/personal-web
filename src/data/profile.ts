@@ -157,5 +157,5 @@ export const certifications: Certification[] = [
 export const socials = {
   github: "https://github.com/ArifMubarok",
   linkedin: "https://www.linkedin.com/in/arifrm",
-  resume: "https://drive.google.com/file/d/144VchcnizTcmNKqXRiMdTn-9iUKko6uJ/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1U0Z1gt3gzX-96GLU_93AgTVj85AkD9d3/view?usp=sharing",
 };
