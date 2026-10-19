@@ -27,7 +27,7 @@ List by category (e.g. Languages, Frameworks, Tools).
 ## 4. Work Experience
 Repeat this block for each job.
 
-### IGCY
+### Alturian Indonesia
 - Role: Software Engineer
 - Duration (start - end): October 2024 - Present
 - Location: Jakarta Selatan, Indonesia
@@ -109,7 +109,7 @@ Repeat this block for each project.
 - GitHub: https://github.com/ArifMubarok
 - LinkedIn: https://www.linkedin.com/in/arifrm
 - Twitter/X: i doesn't have
-- Portfolio/Resume link: here's my resume https://drive.google.com/file/d/1U0Z1gt3gzX-96GLU_93AgTVj85AkD9d3/view?usp=sharing
+- Portfolio/Resume link: here's my resume https://drive.google.com/file/d/170m279FWDkjtTimDXn8EAi-m81lESkZK/view?usp=sharing
 - Other:
 
 ## 9. Contact / Call to Action
@@ -134,3 +134,4 @@ nothing for now
 - when click on the topbar menu, please make it smooth scroll
 - update the hero paragraph and about me to highlight the Malaysia e-Invoice part more (headline/tagline stays as "Software Engineer")
 - synced all content (work experience, skills, phone number) with updated CV (Arif_Rahman_Mubarok_Resume_3.pdf): IGCY's two roles merged into one (Oct 2024 - Present), company renamed "IGCY SG" → "IGCY", CV. Gudang Media Perkasa dates corrected to Feb - Jun 2023, added MongoDB to skills
+- synced resume link and company name with updated CV (Arif_Rahman_Mubarok_Resume_7.pdf): company renamed "IGCY" → "Alturian Indonesia", resume link updated to new Google Drive URL
