@@ -34,7 +34,8 @@ Repeat this block for each job.
 - Description / responsibilities: 
     Led and managed a development team of up to 3 members while remaining hands-on in development, overseeing team workload, task distribution, and deadline adherence across multiple concurrent retail projects (POS, ERP – Merchandising & HRIS, and Loyalty solutions) for Indonesia-based clients
     Developed and maintained ERP solutions with a focus on HRIS modules, including attendance and payroll systems tailored to the Malaysian market, delivering full-cycle features across both frontend and backend
-    Managed the Loyalty program for Indonesia-based clients, supporting 400k+ active customers
+    Built a subscription feature for the Loyalty program (400k+ active customers) that lets customers purchase a subscription and claim free items every week for up to 1 year, and handled ongoing bug fixes
+    Optimized the ERP (Merchandising), Loyalty, and POS websites with lazy loading, caching, removal of unnecessary queries, and memoization, cutting CPU usage by 50-60%
     Managed Malaysia e-Invoice integration projects, ensuring IRB-compliant data processing from structured data files
     Collaborated cross-functionally with Operations and Project Management teams to gather, implement, and align deliverables with client requirements and timelines
 - Key achievements:
@@ -135,3 +136,4 @@ nothing for now
 - update the hero paragraph and about me to highlight the Malaysia e-Invoice part more (headline/tagline stays as "Software Engineer")
 - synced all content (work experience, skills, phone number) with updated CV (Arif_Rahman_Mubarok_Resume_3.pdf): IGCY's two roles merged into one (Oct 2024 - Present), company renamed "IGCY SG" → "IGCY", CV. Gudang Media Perkasa dates corrected to Feb - Jun 2023, added MongoDB to skills
 - synced resume link and company name with updated CV (Arif_Rahman_Mubarok_Resume_7.pdf): company renamed "IGCY" → "Alturian Indonesia", resume link updated to new Google Drive URL
+- added two missed bullets from the updated CV to Alturian Indonesia's description: the Loyalty subscription feature detail, and the ERP/Loyalty/POS optimization work (cut CPU usage by 50-60%)
