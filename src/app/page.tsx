@@ -1,24 +1,24 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import Education from "@/components/Education";
+import Stats from "@/components/Stats";
+import Interstitial from "@/components/Interstitial";
+import Work from "@/components/Work";
+import Showcase from "@/components/Showcase";
+import Credentials from "@/components/Credentials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="flex-1">
+      <main id="main-content">
         <Hero />
         <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
+        <Stats />
+        <Interstitial />
+        <Work />
+        <Showcase />
+        <Credentials />
         <Contact />
       </main>
       <Footer />

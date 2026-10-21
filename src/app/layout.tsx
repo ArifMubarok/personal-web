@@ -1,22 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import ThemeProvider from "@/components/ThemeProvider";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
   title: "Arif Rahman Mubarok — Software Engineer",
   description:
-    "Software Engineer Team Lead building retail systems — POS, ERP, and Loyalty platforms — for clients in Indonesia and Malaysia.",
+    "Software Engineer specializing in Malaysia's IRB-compliant e-Invoice integration and large-scale retail systems (POS, ERP, Loyalty) for clients in Indonesia and Malaysia.",
 };
 
 export default function RootLayout({
@@ -25,13 +14,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" className="h-full">
+      <head>
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-full">
+        <a
+          href="#main-content"
+          className="fixed left-4 z-[100] -translate-y-20 px-4 py-3 text-[15px] font-medium transition-transform focus:translate-y-0"
+          style={{ top: 16, background: "var(--ink)", color: "var(--accent-ink)" }}
+        >
+          Skip to content
+        </a>
+        {children}
+        <RevealObserver />
       </body>
     </html>
   );

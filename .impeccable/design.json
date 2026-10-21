@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T02:45:10Z",
+  "title": "Design System: Arif Rahman Mubarok — Personal Site",
+  "extensions": {
+    "colorMeta": {
+      "ledger-cobalt": { "role": "primary", "displayName": "Ledger Cobalt", "canonical": "#062b8a", "tonalRamp": ["#03123b", "#052475", "#0836af", "#0a48e9", "#396ef6", "#7398f9", "#adc3fb", "#e7edfe"] },
+      "muted-cobalt": { "role": "primary-muted", "displayName": "Muted Cobalt", "canonical": "#2a4a8f", "tonalRamp": ["#0e182f", "#1c315e", "#29498d", "#3761bc", "#5f83d0", "#8ea7de", "#bdcbeb", "#ebf0f9"] },
+      "folder-sand": { "role": "neutral-ground", "displayName": "Folder Sand", "canonical": "#e6dbc7", "tonalRamp": ["#2a2213", "#544426", "#7e6538", "#a8874b", "#bfa370", "#d2be9a", "#e4d9c4", "#f7f4ed"] },
+      "manila": { "role": "neutral-surface", "displayName": "Manila", "canonical": "#ddd0b9", "tonalRamp": ["#292214", "#524328", "#7b643c", "#a3854f", "#bba174", "#cfbd9c", "#e3d8c5", "#f7f3ee"] },
+      "manila-deep": { "role": "neutral-surface-strong", "displayName": "Manila Deep", "canonical": "#d3c4a6", "tonalRamp": ["#292214", "#514428", "#7a653c", "#a28750", "#bba375", "#cfbe9d", "#e3d9c5", "#f7f4ee"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The hero name only, authored as two fixed lines so it never wraps unpredictably." },
+      "head": { "displayName": "Head", "purpose": "One per section — the section's own title." },
+      "figure": { "displayName": "Figure", "purpose": "The five stat numbers in Numbers only; carries tabular-nums and the decimal-align logic." },
+      "lead": { "displayName": "Lead", "purpose": "The hero's supporting sentence and other single statements heavier than body copy." },
+      "body": { "displayName": "Body", "purpose": "All running text: bios, ledger detail, bullets, coupon copy. Kept at 17px or above everywhere." },
+      "small": { "displayName": "Small", "purpose": "Metadata only — ledger highlight/year, stat captions, cert issuer/date, footer credits." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "reveal", "value": "opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)", "purpose": "Per-element scroll entrance: opacity 0→1, translateY(24px)→0, staggered by a --reveal-delay custom property." },
+      { "name": "drift", "value": "scale(1.04)→scale(1.1) translate(-1.5%,-1.5%), 18s ease-in-out infinite alternate", "purpose": "The signature slow-zoom move on the Showcase server-rack photograph." },
+      { "name": "pan", "value": "object-position 0%→100% 50%, 30s linear infinite alternate", "purpose": "The one other moving picture: a slow horizontal pan on the batik textile band in Credentials." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Flat Ledger Cobalt fill, Folder Sand text, square corners. 'Let's connect' / 'View repo'.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Let&#39;s connect →</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: #062b8a; color: #e6dbc7; padding: 12px 24px; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 150ms ease; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { opacity: 0.85; } .ds-btn-primary:focus-visible { outline: 2px solid #062b8a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "The inverse of Primary — Folder Sand fill, Ledger Cobalt text — for a second action on a cobalt ground.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Let&#39;s connect →</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: #e6dbc7; color: #062b8a; padding: 12px 24px; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 150ms ease; } .ds-btn-ghost:hover, .ds-btn-ghost:focus-visible { opacity: 0.85; }"
+    },
+    {
+      "name": "Folder Tab",
+      "kind": "nav",
+      "refersTo": "folder-tab",
+      "description": "Signature component: the hero's section links as a stack of peeking file-folder bands with trapezoid tabs.",
+      "html": "<div class=\"ds-folder-stack\"><a class=\"ds-folder\" href=\"#about\" style=\"background:#ddd0b9\"><span class=\"ds-folder-tab\">About</span><span class=\"ds-folder-arrow\">↓</span></a><a class=\"ds-folder\" href=\"#numbers\" style=\"background:#d3c4a6; margin-top:-44px\"><span class=\"ds-folder-tab\">Numbers</span><span class=\"ds-folder-arrow\">↓</span></a></div>",
+      "css": ".ds-folder-stack { position: relative; width: 86%; margin: 0 auto; } .ds-folder { position: relative; display: block; min-height: 84px; padding: 20px 24px; color: #062b8a; text-decoration: none; transition: transform 300ms ease; } .ds-folder:hover, .ds-folder:focus-visible { transform: translateY(-8px); } .ds-folder-tab { position: absolute; top: -18px; left: 24px; display: inline-flex; align-items: center; height: 34px; padding: 0 16px; background: #062b8a; color: #e6dbc7; font-size: 13px; font-weight: 500; clip-path: polygon(0 100%, 0 0, 100% 0, 85% 100%); } .ds-folder-arrow { position: absolute; bottom: 16px; right: 24px; opacity: 0.4; font-size: 13px; transition: opacity 150ms ease; } .ds-folder:hover .ds-folder-arrow { opacity: 0.9; }"
+    },
+    {
+      "name": "Ledger Row",
+      "kind": "custom",
+      "refersTo": "ledger-row",
+      "description": "A job-history row: company, one-line highlight, year range, and a circular +/- expand control. Real conditional render, not CSS-hidden.",
+      "html": "<button class=\"ds-ledger-row\" aria-expanded=\"false\"><span class=\"ds-ledger-company\">Alturian Indonesia</span><span class=\"ds-ledger-highlight\">Batches IRB e-Invoice submissions 50 at a time</span><span class=\"ds-ledger-year\">2024—</span><span class=\"ds-ledger-toggle\">+</span></button>",
+      "css": ".ds-ledger-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px; width: 100%; min-height: 44px; padding: 20px 0; background: transparent; border: none; text-align: left; cursor: pointer; color: #062b8a; transition: opacity 150ms ease; } .ds-ledger-row:hover { opacity: 0.7; } .ds-ledger-company { font-size: 19px; font-weight: 600; } .ds-ledger-highlight { flex: 1; font-size: 14px; color: #2a4a8f; } .ds-ledger-year { font-size: 14px; color: #2a4a8f; font-variant-numeric: tabular-nums; } .ds-ledger-toggle { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 9999px; background: #d3c4a6; font-size: 14px; font-weight: 500; }"
+    },
+    {
+      "name": "Stat Row",
+      "kind": "custom",
+      "refersTo": "stat-row",
+      "description": "One quantified proof point: a decimal-aligned figure (fixed-width whole part, left-aligned suffix) and a caption.",
+      "html": "<div class=\"ds-stat\"><div class=\"ds-stat-figure\"><span class=\"ds-stat-whole\">50</span><span class=\"ds-stat-suffix\"></span></div><p class=\"ds-stat-caption\">invoices batched into a single IRB e-Invoice submission</p></div>",
+      "css": ".ds-stat { padding: 20px 0; } .ds-stat-figure { display: flex; align-items: baseline; } .ds-stat-whole { width: 5ch; text-align: right; font-size: 64px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; color: #062b8a; } .ds-stat-suffix { text-align: left; font-size: 64px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; color: #062b8a; } .ds-stat-caption { margin-top: 8px; font-size: 17px; color: #2a4a8f; }"
+    },
+    {
+      "name": "Scalloped Sheet",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "The About/Credentials panel: a fixed-width Manila sheet with a scalloped bottom edge, used for the letter and the credentials menu.",
+      "html": "<div class=\"ds-sheet\"><h2 class=\"ds-sheet-title\">A letter, from Jakarta</h2><p class=\"ds-sheet-body\">I'm a Software Engineer based in Jakarta…</p></div>",
+      "css": ".ds-sheet { position: relative; max-width: 640px; padding: 48px 40px; background: #ddd0b9; color: #062b8a; } .ds-sheet::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: -1px; height: 22px; background-image: radial-gradient(circle at 11px 0, #e6dbc7 11px, transparent 11.5px); background-size: 22px 22px; background-repeat: repeat-x; } .ds-sheet-title { font-size: 14px; font-weight: 500; } .ds-sheet-body { margin-top: 28px; font-size: 17px; line-height: 1.55; }"
+    },
+    {
+      "name": "Coupon",
+      "kind": "custom",
+      "refersTo": "coupon",
+      "description": "The Contact card: a cobalt coupon with top/bottom semicircle notches and a dotted perforation between the pitch and the form.",
+      "html": "<div class=\"ds-coupon\"><div class=\"ds-coupon-pitch\"><h2>Let&#39;s connect</h2><p>I usually reply within 24 hours.</p></div><div class=\"ds-coupon-form\"><input placeholder=\"Your name\"/><button class=\"ds-btn-ghost\">Send</button></div></div>",
+      "css": ".ds-coupon { position: relative; display: grid; grid-template-columns: 1fr 1fr; max-width: 896px; background: #062b8a; color: #e6dbc7; } .ds-coupon::before, .ds-coupon::after { content: \"\"; position: absolute; left: 46%; width: 28px; height: 28px; border-radius: 9999px; background: #e6dbc7; } .ds-coupon::before { top: -14px; } .ds-coupon::after { bottom: -14px; } .ds-coupon-pitch, .ds-coupon-form { padding: 48px; } .ds-coupon-pitch h2 { font-size: 32px; font-weight: 600; } .ds-coupon-pitch p { margin-top: 32px; font-size: 17px; } .ds-coupon-form input { display: block; width: 100%; min-height: 52px; margin-bottom: 10px; padding: 0 16px; background: #e6dbc7; color: #062b8a; border: none; font-size: 17px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Open Folder",
+    "overview": "The site is built as the physical object its subject's own specialty would produce: a stack of filed folders you open through, and a ledger of figures and roles. The hero isn't a banner with a nav bar bolted on — the six section names *are* folder tabs, peeking out of a stack on a cobalt letterhead ground, with the front one already open. The idea traces straight back to the one fact that makes this candidate specific: he batches Malaysia's e-Invoice submissions and exports database records for a living, so the page itself is stationery — a letter, a ledger, a menu sheet, a coupon — not a generic component kit wearing his name.\n\nDensity follows the object it's imitating: the hero's folder stack is tight and tabbed, the ledger rows in \"Where I've worked\" are compact until opened, and the stat column reads like figures ruled into a page. Between those, full-bleed real pictures (an archival account-book cover, a 19th-century batik textile, a server rack, a muted typing loop) carry the \"paper and ink\" world further without ever standing in for a product shot he doesn't have. The palette is two tones doing every job: one cobalt ink, one sand paper, nothing else.",
+    "keyCharacteristics": [
+      "The page's own object-ness carries the identity: folders, scalloped letter sheets, a ledger table, a clip-out coupon, each a flat shape with real cut edges, never an outlined box.",
+      "One typeface (Switzer), one hue (Ledger Cobalt) against one paper tone (Folder Sand) and its two tonal steps (Manila, Manila Deep).",
+      "Every section is a structurally different composition from its neighbor; nothing repeats as a card grid.",
+      "Real, credited pictures of the subject's world appear at least once per section that has room for one, duotoned into the palette."
+    ],
+    "rules": [
+      { "name": "The Two-Tone Rule", "body": "The entire palette is Ledger Cobalt plus the Folder Sand/Manila family — no third hue, no tint derived from opacity. A new \"lighter\" or \"muted\" value is one of the two named tones or Muted Cobalt; it is never invented as rgba(ink, 0.4).", "section": "colors" },
+      { "name": "The Reversal Rule", "body": "Depth and hierarchy come from which surface is cobalt and which is sand, not from shadow or tint. A component never mixes the two directions; pick one reversal per surface.", "section": "colors" },
+      { "name": "The Decimal-Align Rule", "body": "Each stat's value is split at the first non-digit character into a whole part (right-aligned, fixed 5ch width) and a suffix/decimal part (left-aligned), so 3.7/4.0 sits in the same ruled column as 1,000+ without hand-kerning.", "section": "typography" },
+      { "name": "The Five-Step Rule", "body": "Display, Head, Figure, Lead, Body, Small — six named roles, but Figure only ever appears in one section. Every inline literal size should resolve to one of these.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "If a surface needs to look above another, it changes tone or changes which color is ground vs. ink — never a box-shadow, including as hover feedback on interactive elements.", "section": "elevation" },
+      { "name": "The Cut-Edge Rule", "body": "When a section boundary needs interest, the edge itself is shaped (a tab, a scallop, a notch, a dotted perforation) rather than decorated with a border, divider, or shadow.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep the palette to exactly Ledger Cobalt, Muted Cobalt, Folder Sand, Manila, Manila Deep — five named values, no opacity-derived tints.",
+      "Do give every real photograph the shared .duotone filter before placing it; an un-toned photo breaks the one-world premise immediately.",
+      "Do shape an edge (tab, scallop, notch, perforation) when a section boundary needs interest; never reach for a border or shadow.",
+      "Do keep running text at Body size (17px+) or larger; Small is for metadata only."
+    ],
+    "donts": [
+      "Don't reintroduce dark mode or a second theme — the object this page imitates has one ink, one paper, in the physical world.",
+      "Don't add a shadow anywhere, including as hover feedback; color/opacity only.",
+      "Don't use native <details>/<summary> for the next collapsible pattern without checking it first — the rendering environment used for this build did not hide closed-details content, which silently broke two inspector checks until the Ledger Row was rewritten as a real conditional render.",
+      "Don't add a sixth type-size step; fold a new size need into the nearest existing one first."
+    ]
+  }
+}
