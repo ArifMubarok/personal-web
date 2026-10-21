@@ -1,290 +1,352 @@
 ---
 name: Arif Rahman Mubarok — Personal Site
-description: A software engineer's CV site built as the object his specialty produces — a stack of filed folders and a ledger of figures.
+description: A software engineer's portfolio set like a dark gallery poster — giant stacked type under a spotlight, with quiet grey detail underneath.
 colors:
-  folder-sand: "#e6dbc7"
-  manila: "#ddd0b9"
-  manila-deep: "#d3c4a6"
-  ledger-cobalt: "#062b8a"
-  muted-cobalt: "#2a4a8f"
+  stage-black: "#000000"
+  surface: "#0b0b0c"
+  surface-raised: "#18181b"
+  hairline: "#262626"
+  ink: "#fafafa"
+  muted: "#a3a3a3"
+  dim: "#85858e"
+  signal-red: "#ef4444"
 typography:
   display:
-    fontFamily: "Switzer, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.25rem, 1.2rem + 6.5vw, 9rem)"
-    fontWeight: 600
-    lineHeight: 0.98
-    letterSpacing: "-0.03em"
-  head:
-    fontFamily: "Switzer, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2rem, 1.3rem + 3.2vw, 4rem)"
-    fontWeight: 600
-    lineHeight: 1.1
-  figure:
-    fontFamily: "Switzer, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.75rem, 1.6rem + 5vw, 6rem)"
-    fontWeight: 600
-    lineHeight: 1
-  lead:
-    fontFamily: "Switzer, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem)"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(3.25rem, 11.5vw, 10rem)"
+    fontWeight: 900
+    lineHeight: 0.85
+    letterSpacing: "-0.05em"
+  headline:
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2rem, 5vw, 5rem)"
+    fontWeight: 900
+    lineHeight: 1.05
+    letterSpacing: "-0.05em"
+  quote:
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.25rem, 6vw, 5.25rem)"
+    fontWeight: 700
+    lineHeight: 1.02
+    letterSpacing: "-0.04em"
+  accent-serif:
+    fontFamily: "Playfair Display, Georgia, serif"
+    fontStyle: "italic"
     fontWeight: 400
-    lineHeight: 1.4
   body:
-    fontFamily: "Switzer, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem)"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "16px"
     fontWeight: 400
     lineHeight: 1.5
-  small:
-    fontFamily: "Switzer, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem)"
+  eyebrow:
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "11px"
+    fontWeight: 600
+    letterSpacing: "0.3em"
+    textTransform: "uppercase"
+  mono-label:
+    fontFamily: "JetBrains Mono, ui-monospace, monospace"
+    fontSize: "11px"
+    fontWeight: 700
+    letterSpacing: "0.3em–0.5em"
+    textTransform: "uppercase"
+  signature:
+    fontFamily: "Alex Brush, cursive"
+    fontSize: "2.25rem"
     fontWeight: 400
-    lineHeight: 1.4
 rounded:
-  flat: "0px"
+  square: "0px"
+  chip: "12px"
+  card: "16px"
+  panel: "28px"
+  sheet: "48px–80px (top corners only)"
   pill: "9999px"
 spacing:
-  container-margin: "clamp(16px, 4vw, 32px)"
-  section-gap: "clamp(120px, 10vw, 220px)"
-  sheet-padding: "48px 40px"
+  container-margin: "clamp(16px, 5vw, 96px)"
+  section-padding: "112px–160px vertical"
+  content-max: "1100px–1340px"
 components:
   button-primary:
-    backgroundColor: "{colors.ledger-cobalt}"
-    textColor: "{colors.folder-sand}"
-    rounded: "{rounded.flat}"
-    padding: "12px 24px"
-  button-ghost:
-    backgroundColor: "{colors.folder-sand}"
-    textColor: "{colors.ledger-cobalt}"
-    rounded: "{rounded.flat}"
-    padding: "12px 24px"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.stage-black}"
+    rounded: "{rounded.pill}"
+    padding: "20px 40px"
+  button-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.hairline}"
+    rounded: "{rounded.pill}"
+    padding: "20px 40px"
+  icon-button:
+    backgroundColor: "{colors.surface-raised}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+    size: "40px"
 ---
 
 # Design System: Arif Rahman Mubarok — Personal Site
 
 ## Overview
 
-**Creative North Star: "The Open Folder"**
+**Creative North Star: "The Lit Stage"**
 
-The site is built as the physical object its subject's own specialty would produce: a stack of filed
-folders you open through, and a ledger of figures and roles. The hero isn't a banner with a nav bar
-bolted on — the six section names *are* folder tabs, peeking out of a stack on a cobalt letterhead
-ground, with the front one already open. The idea traces straight back to the one fact that makes this
-candidate specific: he batches Malaysia's e-Invoice submissions and exports database records for a
-living, so the page itself is stationery — a letter, a ledger, a menu sheet, a coupon — not a generic
-component kit wearing his name.
+The page is a black stage with one soft spotlight on it. The hero is a poster: three lines of 900-weight
+type ("BACKEND & / SOFT⚡WARE / EN‹/›GINEER") so large they become the layout, with the words fading from
+white into grey as if the light falls off across them. Everything after the hero steps down in volume:
+grey running text, mono labels, hairline borders, and a few saturated colour hits (a blue bolt, an amber
+code bracket, a red corner mark, a green live dot) that act like stage props rather than a palette.
 
-Density follows the object it's imitating: the hero's folder stack is tight and tabbed, the ledger rows
-in "Where I've worked" are compact until opened, and the stat column reads like figures ruled into a
-page. Between those, full-bleed real pictures (an archival account-book cover, a 19th-century batik
-textile, a server rack, a muted typing loop) carry the "paper and ink" world further without ever
-standing in for a product shot he doesn't have. The palette is two tones doing every job: one cobalt ink,
-one sand paper, nothing else.
+The layout follows a gallery-portfolio rhythm adapted from a reference site the owner chose
+(syahrilarfianalmazril.my.id). Its structure and feel were rebuilt from scratch; no code, copy or images
+were copied. Each section is a different set piece: a red-cornered quote frame, a rounded sheet that
+slides over it, a giant word that drifts sideways, logo marquees, spinning CSS cubes, a stack of pinned
+work cards, an alternating timeline, paper-white certificate cards, and tilted ribbons over the contact
+block.
 
-Confirmed rejections: no gradients, no shadows on anything at rest, no eyebrow labels, no card grids, no
-second accent hue, no rounded corners except on things that are genuinely round (a portrait, a dot, a
-coupon notch). Dark mode was dropped entirely for this build — the object this page imitates (a letter,
-a ledger, a filed folder) exists in one ink on one paper in the real world, and a second palette would
-break that premise, not extend it.
+The content stays specific to Arif: e-Invoice batching, retail POS/ERP/Loyalty systems, quantified
+figures. The theatre is in the type and motion; the words stay plain and factual.
 
-**Key Characteristics:**
-- The page's own object-ness carries the identity: folders, scalloped letter sheets, a ledger table, a
-  clip-out coupon, each a flat shape with real cut edges, never an outlined box.
-- One typeface (Switzer), one hue (Ledger Cobalt) against one paper tone (Folder Sand) and its two
-  tonal steps (Manila, Manila Deep).
-- Every section is a structurally different composition from its neighbor; nothing repeats as a card
-  grid.
-- Real, credited pictures of the subject's world (not stock, not invented product shots) appear at
-  least once per section that has room for one, duotoned into the palette.
+**Key characteristics:**
+- Dark only. Pure black ground (`#000`), near-black surfaces, one off-white ink.
+- One sans (Inter) doing nearly everything at extreme weights (900 display, 700 headings), with
+  Playfair Display italic as the single expressive counterpoint inside headlines.
+- Grey is the main supporting colour; saturated colour appears only in small, purposeful props.
+- Every section has its own motion idea, all of it scroll- or CSS-driven, with no animation library.
 
 ## Colors
 
-Two tones in total — one paper, one ink — plus two tonal steps of the paper used for layered surfaces.
-No gradient, no second hue, no opacity-based "muted" scale: every color here is a flat, named value.
+### Ground and surfaces
+- **Stage Black** (`#000000`, `--bg`): the page ground and the text colour on white buttons.
+- **Surface** (`#0b0b0c`, `--surface`): cards, chips, the footer bar and the experience cards.
+- **Surface Raised** (`#18181b`, `--surface-2`): the active nav pill, icon buttons, date tags, and
+  the "ENGINEER" word band.
+- **Hairline** (`#262626`, `--line`): every border and divider. Borders are always 1px hairlines.
 
-### Primary
-- **Ledger Cobalt** (`#062b8a`): the only ink in the system. Fills the hero ground, every primary
-  button, every folder tab, every heading and running-text color, and the Contact coupon's field. It is
-  not an "accent" reserved for small moments — on this page, cobalt-on-sand and sand-on-cobalt are the
-  two states everything lives in.
-- **Muted Cobalt** (`#2a4a8f`): the one secondary-text step, used for captions, metadata, and
-  supporting lines where full Ledger Cobalt would be too heavy. Checked against both Folder Sand and
-  Manila at 1440/768/390px — contrast clears 4.5:1 on both (the predecessor hex, `#3a5aa8`, fell to
-  4.3:1 on Manila at tablet width and was replaced for that reason).
+### Text
+- **Ink** (`#fafafa`, `--ink`): headings, primary text, and the fill of primary buttons and the
+  back-to-top button. 20:1 on black.
+- **Muted** (`#a3a3a3`, `--muted`): body copy, secondary lines, logo labels. 8.3:1 on black, so it's
+  safe at any size.
+- **Dim** (`#85858e`, `--dim`): the quietest tier, for mono labels, eyebrow text and some small
+  descriptions. 5.74:1 on black, 5.38:1 on Surface and 4.85:1 on Surface Raised, so it passes WCAG AA
+  for small text everywhere. It was raised from `#71717a`, which failed AA (4.35:1 on black). Don't push
+  it darker again.
 
-### Neutral
-- **Folder Sand** (`#e6dbc7`): the page ground, and the "paper" color reversed-out as text/fill on a
-  cobalt surface (buttons, the coupon's inputs, the footer's accent-ink role).
-- **Manila** (`#ddd0b9`): one tone darker than Folder Sand. Used for the About and Credentials sheets,
-  alternating folder-tab bands, and any surface that needs to read as "a layer above the page" without
-  a shadow.
-- **Manila Deep** (`#d3c4a6`): a second tone down, for the alternating folder band and the Showcase
-  project's info cell. Manila / Manila Deep / Folder Sand is the system's only depth cue.
+### Accent and props
+- **Signal Red** (`#ef4444`, `--accent`): the Core Focus frame, its corner squares, its eyebrow and
+  note line, and the bullet dots in the Achievements card. 5.6:1 on black. It's the only colour token
+  that is themed.
+- **Prop colours** (Tailwind defaults, used inline, not tokens): sky-400 bolt and amber-400 code bracket
+  in the hero, green-500 live dot on the stats pill, `#8fae3c` ball in the word band, a
+  violet-500 → blue-500 → sky-400 gradient on the experience rail, and six saturated cube-face colours
+  per feature. Brand logos in the tech marquee use each brand's own colour, except Angular (`#dd0031`)
+  and Express (`#e5e5e5`), which are lightened so they show on black.
 
-### Named Rules
-**The Two-Tone Rule.** The entire palette is Ledger Cobalt plus the Folder Sand/Manila family — no
-third hue, no tint derived from opacity. A new "lighter" or "muted" value is one of the two named tones
-or Muted Cobalt; it is never invented as `rgba(ink, 0.4)`.
+### Named rules
+**The Spotlight Rule.** Colour is a prop, never a fill for whole sections. A saturated colour may cover
+an icon, a dot, a cube face or a 1px line. Large surfaces stay black, near-black or (for the
+certificate cards and the work card) paper white.
 
-**The Reversal Rule.** Depth and hierarchy come from *which* surface is cobalt and which is sand, not
-from shadow or tint. The hero, the Contact coupon, and the footer are cobalt grounds with sand text and
-fills; every other section is a sand ground with cobalt text. A component never mixes the two
-directions (cobalt text on cobalt ground, or sand-on-sand) — pick one reversal per surface.
+**The Sheen Rule.** Display words that need extra depth use the `.sheen` gradient (white to `#8a8a8a`,
+clipped to the text). Use it on display type only, and pair a sheened word with a solid-white word
+nearby so the fade reads as light, not as a disabled state.
 
 ## Typography
 
-**Typeface:** Switzer (400/500/600), loaded from Fontshare — one neo-grotesk doing every job, text and
-display alike. No second face, no monospace anywhere on the page (there is no code/data context that
-would earn one).
+**Faces** (all via `next/font/google`, self-hosted at build time):
+- **Inter** (`--font-sans`): everything by default.
+- **Playfair Display italic** (`--font-serif`): one phrase per headline at most ("hands-on
+  engineering", "one course at a time", "back-office systems"), plus the name line on certificate
+  cards.
+- **JetBrains Mono** (`--font-mono`): the nav clock, date tags, "Feature — 01" counters, the page
+  counter and the hero's place line.
+- **Alex Brush** (`--font-brush`): the "Arif" signature in Core Focus only.
 
-**Character:** Exact and unshowy. Switzer's tight, even letterforms keep the dense, quantified content
-(job history, certification dates, a GPA) legible at a glance without adding a voice of their own — the
-real pictures and the object-shapes carry the personality; the type stays out of the way.
+The next/font CSS variables are named `--nf-*` on purpose: Tailwind v4's `@theme` already owns
+`--font-mono` and friends, and reusing those names creates a circular variable.
 
 ### Hierarchy
-- **Display** (600, `clamp(2.25rem, …, 9rem)` / 36–144px, 0.98 line-height, −0.03em tracking): the hero
-  name only, authored as two lines ("Arif Rahman" / "Mubarok") so it never wraps unpredictably at any
-  width.
-- **Head** (600, `clamp(2rem, …, 4rem)` / 32–64px): one per section — "Where I've worked," "Credentials,"
-  "Let's connect," etc.
-- **Figure** (600, `clamp(2.75rem, …, 6rem)` / 44–96px, tabular-nums): the five stat numbers in
-  "Numbers" only. A role distinct from Display and Head because it has to hold a decimal point (`3.7/4.0`)
-  in clean alignment against whole numbers (`50`, `6M+`) — see the Decimal-Align Rule below.
-- **Lead** (400, `clamp(1.25rem, …, 1.625rem)` / 20–26px): the hero's supporting sentence and any other
-  single statement that needs more weight than body copy but isn't a heading.
-- **Body** (400, `clamp(1.0625rem, …, 1.1875rem)` / 17–19px): all running text — bios, ledger-row
-  detail, achievement and description bullets, coupon copy. Deliberately kept at 17px or above
-  everywhere; an earlier pass at 14px running text was the single biggest "sizes in use" and
-  "body-size" finding from `inspect.mjs` and was raised project-wide.
-- **Small** (400, `clamp(0.8125rem, …, 0.875rem)` / 13–14px): metadata only — ledger-row highlight and
-  year, stat captions, cert issuer/date, footer credits. Never the dominant size on a screen.
+- **Display** (900, `clamp(3.25rem, 11.5vw, 10rem)`, line-height 0.85, -0.05em, uppercase): the hero
+  lines. The "About me" title uses a larger cut (`clamp(4rem, 13vw, 11rem)`) with the same settings,
+  and the word band uses `clamp(5rem, 16vw, 15rem)`.
+- **Headline** (900, `clamp(2rem, 5vw, 5rem)`, -0.05em to -0.06em): section titles (statistics,
+  Professional Journey, certifications, contact). Feature titles are the same weight, uppercase,
+  `clamp(2.5rem, 5vw, 4rem)`, one word per line.
+- **Quote** (700, `clamp(2.25rem, 6vw, 5.25rem)`, -0.04em): the Core Focus statement, with a dimmed
+  middle clause and a Playfair italic close.
+- **Body**: 16px Inter in Muted; 18–20px for feature descriptions and the Core Focus lead line.
+- **Eyebrow** (`.eyebrow`: 11px, 600, 0.3em tracking, uppercase): section kickers such as "Core focus",
+  "My short story" and "Tech stack & ecosystem".
+- **Mono label** (11px, 700, 0.3–0.5em tracking, uppercase): counters, dates and the clock.
 
-### Named Rules
-**The Decimal-Align Rule.** In "Numbers," each stat's value is split at the first non-digit character
-into a whole part (right-aligned, fixed `5ch` width) and a suffix/decimal part (left-aligned). Whole
-numbers (`50`, `6M+`) simply leave the suffix track empty. This is what lets `3.7/4.0` sit in the same
-ruled column as `1,000+` without hand-kerning.
+### Named rules
+**The One-Italic Rule.** A headline gets at most one Playfair italic phrase, and it's always the
+softer, human half of the sentence. Never set a whole heading in the serif.
 
-**The Five-Step Rule.** Display, Head, Figure, Lead, Body, Small — six named roles, but Figure only
-ever appears in one section. Treat it as the one deliberate exception, not a precedent for adding a
-seventh size; `inspect.mjs`'s `size-count` check flagged the system at 10 raw pixel values once in
-testing, and every one of those traced back to an inline literal that should have referenced a step.
+**The Big-Then-Quiet Rule.** Each section has one shouting element (display word, quote, headline) and
+everything else steps down to Body or label size. Two competing display-size elements in one viewport
+is a bug.
 
 ## Layout
 
-A loose, content-driven grid rather than one fixed container: the hero and ledger table sit in a
-`max-w-3xl`–`max-w-5xl` centered column, the About/Credentials sheets are fixed at 640px, Showcase and
-Contact use their own proportions (a 50/50 split; a ~2.2:1 coupon). What stays constant everywhere is
-the outer margin (`clamp(16px, 4vw, 32px)`, the same on both sides at every width) and the rule that a
-section never leaves one half of the screen full and the other empty — a void is only valid when a
-picture, a second column, or a figure closes the far side.
+- The outer margin is `--margin-outer: clamp(16px, 5vw, 96px)`, applied as inline padding on every
+  section, so phones keep a 16px gutter.
+- Content widths sit between 1100px (statistics) and 1340px (Core Focus, About, Experience,
+  certifications). The hero type block is 1280px.
+- Sections breathe with 112–160px of vertical padding. The work intro is `min-h-[80svh]` and each work
+  card is a full `h-svh` sticky panel.
+- `body` uses `overflow-x: clip` so tilted ribbons and marquees never create sideways scroll. Verified at
+  390px and 1440px.
 
-Section-to-section rhythm is `clamp(120px, 10vw, 220px)` of vertical padding, the "normal gap"; the one
-exception is "Where I've worked," whose bottom padding is deliberately shorter (64px fixed) because its
-ledger rows are short by default and a full gap-section there read as dead space in testing.
-
-No two adjacent sections share a layout shape: folder stack → scalloped letter → ruled figure column →
-full-bleed video → ledger table → split plate → scalloped menu sheet → clip-out coupon → flat footer.
+### Section sequence
+1. **Nav** (fixed): Jakarta clock (mono) on the left, a pill of section links in the centre (hidden
+   below `md`), and GitHub/LinkedIn icon buttons on the right. The active link follows scroll.
+2. **Hero:** spotlight background, three display lines aligned right / centre / left, the intro and
+   availability notes tucked into the first and last lines on `lg` (stacked below the type on smaller
+   screens), a vertical "Available for opportunity" tab, and a hairline with "Jakarta, ID — year" and a
+   round arrow button.
+3. **Core Focus:** a 1px red-tinted frame with 6px red corner squares, a quote, then a three-column
+   row (lead line, Scope & Platform, Integration + signature).
+4. **Statistics:** a sheet with 48–80px rounded top corners that overlaps the previous section
+   (`-mt-10`, upward shadow), a live-dot pill, a headline, a four-up counter bar with dashed dividers,
+   and four detail cards.
+5. **Word band:** "ENGINEER" in grey on Surface Raised, translated sideways as the band crosses the
+   viewport.
+6. **About:** "About me" display title, a grayscale portrait card (colour on hover) with a tilted
+   "Team lead" sticker, the bio, education and location, then two logo marquees running in opposite
+   directions.
+7. **Features:** three alternating rows, each a spinning CSS cube and a "Feature — 0n" block with an
+   uppercase title, body copy and tag chips.
+8. **Work:** an intro line, then five sticky full-screen panels that stack over each other. Each panel
+   has a tinted background (blurred photo or a faint giant figure) and a paper-white three-column card.
+   A "Page n / 5" counter pins bottom-left on `sm` and up.
+9. **Experience:** a centred headline and a three-column timeline. Cards alternate above and below a
+   gradient rail on `lg`, and become a plain list below `lg`.
+10. **Certifications:** headline with an italic tail, then a 3-column grid of paper certificate cards
+    plus one dark Achievements card.
+11. **Contact and footer:** two counter-tilted marquee ribbons (roles and stack), the "Let's Build
+    Something Reliable Together" headline, Hire Me and View My Resume buttons, a rounded footer bar (LinkedIn and email only; GitHub stays out of
+    the contact area on purpose, see PRODUCT.md), and
+    image credits.
+12. **Back to top:** a fixed white circle that fades in after one viewport of scroll.
 
 ## Elevation & Depth
 
-Flat, full stop. Nothing on the page casts a shadow at rest or on hover — the house rule this direction
-is built on. Depth is read entirely from the Reversal Rule (which surface is cobalt, which is sand) and
-the Manila / Manila Deep tonal steps, never from a `box-shadow`.
+Depth comes mostly from tone steps (Black → Surface → Surface Raised) and hairlines. Shadows are used
+sparingly and only where something physically sits over something else:
+- the statistics sheet's upward shadow (`0 -30px 60px rgba(0,0,0,.8)`) as it slides over Core Focus;
+- the back-to-top button (`0 10px 40px rgba(0,0,0,.6)`);
+- the paper work cards (`shadow-2xl`) floating over their blurred backdrop.
 
-### Named Rules
-**The No-Shadow Rule.** If a surface needs to look "above" another, it either changes tone (Folder Sand
-→ Manila → Manila Deep) or changes which color is ground vs. ink. A shadow is never the answer, including
-on the live interactive elements (the ledger's expand control, the Showcase tabs) — their feedback is a
-background-color/opacity change, not a lift.
+No other component casts a shadow. Hover feedback is a border brightening, a colour swap or a small
+translate (-2px to -6px), never a new shadow.
 
 ## Shapes
 
-Square corners everywhere except where something is genuinely round: the About portrait (a circle), the
-dotted perforation on the Contact coupon (round dots), the coupon's own top/bottom notches (semicircles,
-via `border-radius: 9999px` on absolutely-positioned pseudo-elements), and the Work section's expand
-indicator (a 28px circle). Everything else — buttons, the folder bands, the sheets, the stat rows, the
-coupon's inputs — is a flat rectangle with a real cut edge where the object calls for one: a trapezoid
-tab (`clip-path: polygon(...)`) on every folder and sheet label, and a scalloped bottom edge (an SVG
-dot-pattern image, not a CSS mask gradient) on the About and Credentials sheets.
+- **Square**: the Core Focus frame and its corner marks, and the work cards.
+- **12px**: tag chips in Features.
+- **16px**: the counter bar, detail cards and experience cards.
+- **28px**: the portrait card, the word band and the footer bar.
+- **48–80px top corners**: the statistics sheet.
+- **Pill**: the nav, every button, icon buttons, tech chips and the stats pill.
+- **2px**: certificate cards, which read as paper, with an inset 1px border as a printed frame.
 
-### Named Rules
-**The Cut-Edge Rule.** When a section needs visual interest at its boundary, the edge itself is shaped
-(a tab, a scallop, a notch, a dotted perforation) rather than decorated with a border, divider, or
-shadow. A hairline rule is never the answer — the two places that might once have reached for one (the
-ledger's row separators, the About sheet's content/footer split) use spacing or the dotted-row motif
-instead.
+## Motion
+
+All motion is CSS keyframes or a small `requestAnimationFrame`/`IntersectionObserver` handler in a
+client component. There's no animation library.
+
+- **Reveal** (`.reveal` + `RevealObserver`): opacity 0→1, translateY 28px→0 and blur 6px→0 over 0.8s
+  with `cubic-bezier(0.16, 1, 0.3, 1)`, staggered through `--reveal-delay`.
+- **CountUp:** headline stats count from 0 with ease-out-quart over 1.6s the first time 40% of the
+  number is visible. Values are written straight to `textContent` (no React state), and the server
+  render holds the final value.
+- **WordBand:** the band's scroll progress maps to a `translate3d` across the word's overflow width.
+- **Marquee** (`.marquee`): a 0→-50% translate on a doubled track. `--marquee-speed` sets the duration
+  and `data-reverse` flips the direction. Edges fade through `.marquee-mask`.
+- **Cube** (`.cube`): an 18s linear Y-rotation at a fixed X/Z tilt, offset per feature with a negative
+  `animation-delay`.
+- **Sticky stack:** `position: sticky` panels, plus an IntersectionObserver for the page counter.
+- **Pulse:** the green live dot's ring.
+- **Reduced motion:** `prefers-reduced-motion: reduce` turns off reveals, keyframes and smooth scroll,
+  and CountUp and WordBand skip their animation.
 
 ## Components
 
 ### Buttons
-- **Shape:** flat rectangle, square corners, `12px 24px` padding, 44px+ tap target.
-- **Primary** (`button-primary`): Ledger Cobalt fill, Folder Sand text. Used for "Let's connect" (hero
-  and footer-adjacent) and "View repo" (Showcase).
-- **Ghost** (`button-ghost`): Folder Sand fill, Ledger Cobalt text — the inverse of primary, used where
-  a button sits on a cobalt ground needing a lighter second action (the hero's own CTA against its
-  cobalt top band).
-- **Hover:** opacity drop to ~85%, no shape or size change — consistent with the No-Shadow Rule's "color
-  only, never lift" feedback language.
+- **Primary** (`button-primary`): Ink pill, black text, 20×40px padding, 18px bold label with a
+  leading icon ("Hire Me"). Hover lifts 2px.
+- **Outline** (`button-outline`): transparent pill with a Hairline border and an Ink label ("View My
+  Resume"). Hover brightens the border.
+- **Icon button:** a 40px Surface Raised circle with an 18px stroke icon; hover inverts to Ink on black.
+- **Round arrow / back to top:** 48–56px Ink circles with a black arrow.
 
-### Folder Tab (signature component)
-The hero's six section links, each a flat Manila/Manila Deep band (alternating by index) with a Ledger
-Cobalt trapezoid tab (`clip-path: polygon(0 100%, 0 0, 100% 0, 85% 100%)`) carrying the section name in
-Folder Sand. Stacked with `margin-top: -44px` per band so only a peeking strip of each closed folder
-shows behind the next; the front (last) folder is fully open and carries the Contact teaser copy. A
-small `↓` glyph fades in at 90% opacity on hover to signal the band is a link. This is the page's one
-loud, signature move — every other interactive element stays quiet by comparison.
+### Nav pill
+A rounded track (black at 50%, `backdrop-blur`, Hairline border) holding the section links. The active
+link gets a Surface Raised pill and Ink text; the others are Muted and turn Ink on hover.
 
-### Ledger Row (Work section)
-A full-width button (not a native `<details>` — see the Don't below) showing company, a one-line
-highlight, and the year range in a single row, 44px+ tall. A 28px Manila-Deep circle holds a `+`/`−`
-glyph. Clicking swaps `+`/`−` and conditionally renders the role's tech stack, achievement bullets
-(Body size, full ink), and description bullets (Body size, Muted Cobalt) beneath it — true React
-conditional rendering, so the collapsed state removes the content from the DOM rather than hiding it
-with CSS.
+### Core Focus frame
+A 1px `signal-red/40` border with four 6px red squares sitting on the corners. It's the one place red
+is used for structure.
 
-### Stat Row (Numbers section)
-One `Row({whole, suffix, caption})` per stat: Figure-size whole part right-aligned in a fixed `5ch`
-track, Figure-size suffix left-aligned immediately after, and a Body-size Muted-Cobalt caption beneath,
-full width. See the Decimal-Align Rule.
+### Stat counter bar
+Four cells (2×2 on phones) with dashed Hairline dividers, a label in 11px Muted caps and a 900-weight
+figure with a smaller suffix.
 
-### Sheet (About, Credentials)
-A fixed 640px Manila panel, `48px 40px`+ padding, square top corners and a scalloped bottom edge (the
-`.scallop-edge` SVG dot-pattern). About adds a 44px circular portrait and a dotted-row + email "tear-off"
-strip at its foot; Credentials repeats the same panel shape for a denser, grouped list (Languages, Daily
-Stack, Certifications, Education) with no sub-dividers beyond spacing.
+### Feature cube
+Six 3px-black-bordered faces, each a saturated colour with a white-to-black sheen gradient and a black
+pill label. It's decorative and `aria-hidden`.
 
-### Coupon (Contact)
-A ~2.2:1 Ledger Cobalt card with two semicircular notches (top/bottom, centered) and a dotted vertical
-perforation between a left "pitch" half (heading + one sentence + LinkedIn link) and a right form half
-(name + message inputs, Folder-Sand fill, plus a submit button). Submission builds a `mailto:` link
-client-side from the two fields — there is no backend, so this is the honest destination rather than a
-simulated success state.
+### Work card
+A paper-white (`#fafafa`) three-column card on a tinted full-screen panel: number, category and summary
+on the left; image or giant figure in the centre; title, year, detail and an optional GitHub link on
+the right. Photos are grayscale until hover.
 
-### Imagery treatment
-Every found photograph and the typing video are passed through one shared `.duotone` CSS filter
-(`grayscale(1) sepia(.35) hue-rotate(185deg) saturate(2.6) brightness(.92) contrast(1.05)`) so archival
-material in unrelated original color casts (a marbled book cover, a batik textile, a server rack, a
-keyboard) reads as one consistent cobalt-toned world rather than five different photo treatments.
+### Experience card
+A mono date tag above a Surface card with role, company, a one-line description, tech chips and a
+native `<details>` "View details" holding the achievements.
+
+`<details>` collapse was checked in Chromium (Playwright): closed cards measure 41px and expand when
+opened. The inner list still reports its full height through `getBoundingClientRect()` while hidden,
+so measure the `<details>` element itself, not its children. An earlier version of this doc warned
+against native `<details>` because of a misleading measurement like that.
+
+### Certificate card
+An off-white (`#f4f4f2`) card with an inset frame, the issuer name in its brand colour, the course
+title, Arif's name in Playfair italic, the date, and a dashed seal with the issuer's initials. Don't
+add "Verified" or similar claims unless a real verification link exists.
+
+### Ribbons
+Two marquee strips tilted ±4°: roles in bold Ink caps on black, and the stack in mono Dim caps on
+Surface Raised. Both are `aria-hidden`.
+
+## Imagery
+
+- The portrait (`/profile.webp`) is grayscale until hover.
+- The work panels reuse two credited archival photos (Account Book Ledger, CC0; Servers in a Rack,
+  CC BY-SA 3.0), shown grayscale in the card and blurred at 40% opacity behind it. Credits live in the
+  footer and must stay while those images are used.
+- Panels without a picture use a giant 900-weight figure ("400K+", "1,000+", "5P") instead of an
+  invented screenshot.
+- Tech logos come from the `simple-icons` package as inline SVG paths, so there are no remote requests.
 
 ## Do's and Don'ts
 
-### Do:
-- **Do** keep the palette to exactly Ledger Cobalt, Muted Cobalt, Folder Sand, Manila, Manila Deep — five
-  named values, no opacity-derived tints.
-- **Do** give every real photograph the shared `.duotone` filter before placing it; an un-toned photo
-  breaks the one-world premise immediately.
-- **Do** shape an edge (tab, scallop, notch, perforation) when a section boundary needs interest; never
-  reach for a border or shadow.
-- **Do** keep running text at Body size (17px+) or larger; Small is for metadata only.
+### Do
+- **Do** keep large surfaces black or near-black, and spend colour on small props.
+- **Do** pair each display or headline element with quiet Muted/Dim detail so one thing shouts per
+  section.
+- **Do** keep every claim factual and traceable to the CV (`src/data/profile.ts`). The design is loud;
+  the copy isn't.
+- **Do** give every new scroll or keyframe effect a reduced-motion path.
+- **Do** check new layouts at 390px for sideways scroll; tilted and marquee elements must stay inside
+  `overflow-x: clip`.
 
-### Don't:
-- **Don't** reintroduce dark mode or a second theme — the object this page imitates has one ink, one
-  paper, in the physical world, and a toggle would contradict the premise documented in Overview.
-- **Don't** add a shadow anywhere, including as hover feedback; color/opacity only.
-- **Don't** use native `<details>`/`<summary>` for the next collapsible pattern without checking it
-  first — the rendering environment used for this build did not hide closed-details content (content
-  stayed in the layout, `display: block`, regardless of the `open` attribute), which silently broke the
-  eyebrow and body-size checks until the Ledger Row was rewritten as a real conditional render. Confirm
-  native collapse actually hides content in whatever browser renders the deployed page before relying on
-  it again.
-- **Don't** add a sixth type-size step; fold a new size need into the nearest existing one first.
+### Don't
+- **Don't** darken Dim below `#85858e`, or add a new grey, without re-checking 4.5:1 on all three
+  surfaces.
+- **Don't** add a second italic phrase, a second accent colour token, or a light theme without
+  revisiting this document.
+- **Don't** copy text, images or code from the reference site; it's another person's portfolio.
+- **Don't** invent screenshots, testimonials or verification badges.
+- **Don't** reuse `--font-*` names for next/font variables (see Typography).

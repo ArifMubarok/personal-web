@@ -1,31 +1,226 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-21T02:45:10Z",
+  "generatedAt": "2026-10-21T12:20:50Z",
   "title": "Design System: Arif Rahman Mubarok — Personal Site",
   "extensions": {
     "colorMeta": {
-      "ledger-cobalt": { "role": "primary", "displayName": "Ledger Cobalt", "canonical": "#062b8a", "tonalRamp": ["#03123b", "#052475", "#0836af", "#0a48e9", "#396ef6", "#7398f9", "#adc3fb", "#e7edfe"] },
-      "muted-cobalt": { "role": "primary-muted", "displayName": "Muted Cobalt", "canonical": "#2a4a8f", "tonalRamp": ["#0e182f", "#1c315e", "#29498d", "#3761bc", "#5f83d0", "#8ea7de", "#bdcbeb", "#ebf0f9"] },
-      "folder-sand": { "role": "neutral-ground", "displayName": "Folder Sand", "canonical": "#e6dbc7", "tonalRamp": ["#2a2213", "#544426", "#7e6538", "#a8874b", "#bfa370", "#d2be9a", "#e4d9c4", "#f7f4ed"] },
-      "manila": { "role": "neutral-surface", "displayName": "Manila", "canonical": "#ddd0b9", "tonalRamp": ["#292214", "#524328", "#7b643c", "#a3854f", "#bba174", "#cfbd9c", "#e3d8c5", "#f7f3ee"] },
-      "manila-deep": { "role": "neutral-surface-strong", "displayName": "Manila Deep", "canonical": "#d3c4a6", "tonalRamp": ["#292214", "#514428", "#7a653c", "#a28750", "#bba375", "#cfbe9d", "#e3d9c5", "#f7f4ee"] }
+      "stage-black": {
+        "role": "neutral-ground",
+        "displayName": "Stage Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4c4c4c",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d9d9d9",
+          "#f2f2f2"
+        ]
+      },
+      "surface": {
+        "role": "neutral-surface",
+        "displayName": "Surface",
+        "canonical": "#0b0b0c",
+        "tonalRamp": [
+          "#18181b",
+          "#313135",
+          "#494950",
+          "#6e6e78",
+          "#95959d",
+          "#b4b4bb",
+          "#d7d7da",
+          "#f2f2f3"
+        ]
+      },
+      "surface-raised": {
+        "role": "neutral-surface-strong",
+        "displayName": "Surface Raised",
+        "canonical": "#18181b",
+        "tonalRamp": [
+          "#18181b",
+          "#303036",
+          "#484851",
+          "#6c6c7a",
+          "#93939f",
+          "#b3b3bc",
+          "#d6d6db",
+          "#f2f2f3"
+        ]
+      },
+      "hairline": {
+        "role": "neutral-border",
+        "displayName": "Hairline",
+        "canonical": "#262626",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4c4c4c",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d9d9d9",
+          "#f2f2f2"
+        ]
+      },
+      "ink": {
+        "role": "text-primary",
+        "displayName": "Ink",
+        "canonical": "#fafafa",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4c4c4c",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d9d9d9",
+          "#f2f2f2"
+        ]
+      },
+      "muted": {
+        "role": "text-secondary",
+        "displayName": "Muted",
+        "canonical": "#a3a3a3",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4c4c4c",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d9d9d9",
+          "#f2f2f2"
+        ]
+      },
+      "dim": {
+        "role": "text-tertiary",
+        "displayName": "Dim",
+        "canonical": "#85858e",
+        "tonalRamp": [
+          "#19191a",
+          "#313135",
+          "#4a4a4f",
+          "#6e6e77",
+          "#95959d",
+          "#b5b5ba",
+          "#d7d7da",
+          "#f2f2f3"
+        ]
+      },
+      "signal-red": {
+        "role": "accent",
+        "displayName": "Signal Red",
+        "canonical": "#ef4444",
+        "tonalRamp": [
+          "#2f0404",
+          "#5e0808",
+          "#8d0c0c",
+          "#d31212",
+          "#ef4343",
+          "#f47b7b",
+          "#f9b9b9",
+          "#fde8e8"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The hero name only, authored as two fixed lines so it never wraps unpredictably." },
-      "head": { "displayName": "Head", "purpose": "One per section — the section's own title." },
-      "figure": { "displayName": "Figure", "purpose": "The five stat numbers in Numbers only; carries tabular-nums and the decimal-align logic." },
-      "lead": { "displayName": "Lead", "purpose": "The hero's supporting sentence and other single statements heavier than body copy." },
-      "body": { "displayName": "Body", "purpose": "All running text: bios, ledger detail, bullets, coupon copy. Kept at 17px or above everywhere." },
-      "small": { "displayName": "Small", "purpose": "Metadata only — ledger highlight/year, stat captions, cert issuer/date, footer credits." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero lines, the About me title and the word band: Inter 900, uppercase, line-height 0.85, -0.05em."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles and feature titles: Inter 900, -0.05em."
+      },
+      "quote": {
+        "displayName": "Quote",
+        "purpose": "The Core Focus statement: Inter 700 with a dimmed clause and a Playfair italic close."
+      },
+      "accent-serif": {
+        "displayName": "Accent Serif",
+        "purpose": "Playfair Display italic, at most one phrase per headline, plus the name line on certificate cards."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text in Muted, 16px; 18-20px for feature descriptions and the Core Focus lead."
+      },
+      "eyebrow": {
+        "displayName": "Eyebrow",
+        "purpose": "11px 600 uppercase kickers with 0.3em tracking."
+      },
+      "mono-label": {
+        "displayName": "Mono Label",
+        "purpose": "JetBrains Mono for the clock, date tags, feature counters and the page counter."
+      },
+      "signature": {
+        "displayName": "Signature",
+        "purpose": "Alex Brush, for the 'Arif' signature in Core Focus only."
+      }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "sheet-lift",
+        "value": "0 -30px 60px rgba(0,0,0,0.8)",
+        "purpose": "The statistics sheet sliding over Core Focus."
+      },
+      {
+        "name": "floating-button",
+        "value": "0 10px 40px rgba(0,0,0,0.6)",
+        "purpose": "Back-to-top button."
+      },
+      {
+        "name": "paper-card",
+        "value": "Tailwind shadow-2xl",
+        "purpose": "Paper-white work cards over their blurred backdrop."
+      }
+    ],
     "motion": [
-      { "name": "reveal", "value": "opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)", "purpose": "Per-element scroll entrance: opacity 0→1, translateY(24px)→0, staggered by a --reveal-delay custom property." },
-      { "name": "drift", "value": "scale(1.04)→scale(1.1) translate(-1.5%,-1.5%), 18s ease-in-out infinite alternate", "purpose": "The signature slow-zoom move on the Showcase server-rack photograph." },
-      { "name": "pan", "value": "object-position 0%→100% 50%, 30s linear infinite alternate", "purpose": "The one other moving picture: a slow horizontal pan on the batik textile band in Credentials." }
+      {
+        "name": "reveal",
+        "value": "opacity, translateY(28px) and blur(6px), 0.8s cubic-bezier(0.16,1,0.3,1)",
+        "purpose": "Scroll entrance staggered by --reveal-delay."
+      },
+      {
+        "name": "count-up",
+        "value": "0 to value, ease-out-quart, 1.6s",
+        "purpose": "Headline stats, written to textContent once 40% visible."
+      },
+      {
+        "name": "word-band",
+        "value": "translate3d mapped to scroll progress",
+        "purpose": "The giant ENGINEER word drifting sideways."
+      },
+      {
+        "name": "marquee",
+        "value": "translateX(0 to -50%), linear infinite, --marquee-speed",
+        "purpose": "Tech logos and contact ribbons; data-reverse flips direction."
+      },
+      {
+        "name": "cube-spin",
+        "value": "rotateY 360deg at rotateX(-24deg) rotateZ(8deg), 18s linear infinite",
+        "purpose": "Feature cubes."
+      },
+      {
+        "name": "pulse",
+        "value": "expanding green ring, 2s infinite",
+        "purpose": "The live dot on the statistics pill."
+      }
     ],
     "breakpoints": [
-      { "name": "sm", "value": "640px" }
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
     ]
   },
   "components": [
@@ -33,87 +228,114 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Flat Ledger Cobalt fill, Folder Sand text, square corners. 'Let's connect' / 'View repo'.",
-      "html": "<a class=\"ds-btn-primary\" href=\"#\">Let&#39;s connect →</a>",
-      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: #062b8a; color: #e6dbc7; padding: 12px 24px; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 150ms ease; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { opacity: 0.85; } .ds-btn-primary:focus-visible { outline: 2px solid #062b8a; outline-offset: 3px; }"
+      "description": "Ink pill with black text and a leading icon. 'Hire Me'.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Hire Me</a>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; gap:12px; border-radius:9999px; background:#fafafa; color:#000; padding:20px 40px; font:700 18px Inter, sans-serif; text-decoration:none; transition:transform 150ms ease; } .ds-btn-primary:hover { transform:translateY(-2px); } .ds-btn-primary:focus-visible { outline:2px solid #fafafa; outline-offset:3px; }"
     },
     {
-      "name": "Ghost Button",
+      "name": "Outline Button",
       "kind": "button",
-      "refersTo": "button-ghost",
-      "description": "The inverse of Primary — Folder Sand fill, Ledger Cobalt text — for a second action on a cobalt ground.",
-      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Let&#39;s connect →</a>",
-      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: #e6dbc7; color: #062b8a; padding: 12px 24px; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 150ms ease; } .ds-btn-ghost:hover, .ds-btn-ghost:focus-visible { opacity: 0.85; }"
+      "refersTo": "button-outline",
+      "description": "Transparent pill with a hairline border. 'View My Resume'.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">View My Resume</a>",
+      "css": ".ds-btn-outline { display:inline-flex; align-items:center; gap:12px; border-radius:9999px; border:1px solid #262626; color:#fafafa; padding:20px 40px; font:700 18px Inter, sans-serif; text-decoration:none; transition:border-color 150ms ease; } .ds-btn-outline:hover { border-color:rgba(250,250,250,0.5); }"
     },
     {
-      "name": "Folder Tab",
-      "kind": "nav",
-      "refersTo": "folder-tab",
-      "description": "Signature component: the hero's section links as a stack of peeking file-folder bands with trapezoid tabs.",
-      "html": "<div class=\"ds-folder-stack\"><a class=\"ds-folder\" href=\"#about\" style=\"background:#ddd0b9\"><span class=\"ds-folder-tab\">About</span><span class=\"ds-folder-arrow\">↓</span></a><a class=\"ds-folder\" href=\"#numbers\" style=\"background:#d3c4a6; margin-top:-44px\"><span class=\"ds-folder-tab\">Numbers</span><span class=\"ds-folder-arrow\">↓</span></a></div>",
-      "css": ".ds-folder-stack { position: relative; width: 86%; margin: 0 auto; } .ds-folder { position: relative; display: block; min-height: 84px; padding: 20px 24px; color: #062b8a; text-decoration: none; transition: transform 300ms ease; } .ds-folder:hover, .ds-folder:focus-visible { transform: translateY(-8px); } .ds-folder-tab { position: absolute; top: -18px; left: 24px; display: inline-flex; align-items: center; height: 34px; padding: 0 16px; background: #062b8a; color: #e6dbc7; font-size: 13px; font-weight: 500; clip-path: polygon(0 100%, 0 0, 100% 0, 85% 100%); } .ds-folder-arrow { position: absolute; bottom: 16px; right: 24px; opacity: 0.4; font-size: 13px; transition: opacity 150ms ease; } .ds-folder:hover .ds-folder-arrow { opacity: 0.9; }"
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "40px Surface Raised circle that inverts on hover.",
+      "html": "<a class=\"ds-icon-btn\" href=\"#\" aria-label=\"GitHub\">GH</a>",
+      "css": ".ds-icon-btn { display:grid; place-items:center; width:40px; height:40px; border-radius:9999px; background:rgba(24,24,27,0.8); color:#fafafa; text-decoration:none; } .ds-icon-btn:hover { background:#fafafa; color:#000; }"
     },
     {
-      "name": "Ledger Row",
-      "kind": "custom",
-      "refersTo": "ledger-row",
-      "description": "A job-history row: company, one-line highlight, year range, and a circular +/- expand control. Real conditional render, not CSS-hidden.",
-      "html": "<button class=\"ds-ledger-row\" aria-expanded=\"false\"><span class=\"ds-ledger-company\">Alturian Indonesia</span><span class=\"ds-ledger-highlight\">Batches IRB e-Invoice submissions 50 at a time</span><span class=\"ds-ledger-year\">2024—</span><span class=\"ds-ledger-toggle\">+</span></button>",
-      "css": ".ds-ledger-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px; width: 100%; min-height: 44px; padding: 20px 0; background: transparent; border: none; text-align: left; cursor: pointer; color: #062b8a; transition: opacity 150ms ease; } .ds-ledger-row:hover { opacity: 0.7; } .ds-ledger-company { font-size: 19px; font-weight: 600; } .ds-ledger-highlight { flex: 1; font-size: 14px; color: #2a4a8f; } .ds-ledger-year { font-size: 14px; color: #2a4a8f; font-variant-numeric: tabular-nums; } .ds-ledger-toggle { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 9999px; background: #d3c4a6; font-size: 14px; font-weight: 500; }"
+      "name": "Nav Pill",
+      "kind": "navigation",
+      "description": "Blurred black track of section links; the active one gets a Surface Raised pill.",
+      "html": "<nav class=\"ds-nav\"><a class=\"is-active\" href=\"#\">Home</a><a href=\"#\">About</a><a href=\"#\">Work</a></nav>",
+      "css": ".ds-nav { display:inline-flex; gap:4px; padding:4px; border-radius:9999px; border:1px solid rgba(38,38,38,0.6); background:rgba(0,0,0,0.5); backdrop-filter:blur(12px); } .ds-nav a { padding:8px 20px; border-radius:9999px; font:700 14px Inter, sans-serif; color:#a3a3a3; text-decoration:none; } .ds-nav a.is-active, .ds-nav a:hover { color:#fafafa; } .ds-nav a.is-active { background:#18181b; }"
     },
     {
-      "name": "Stat Row",
-      "kind": "custom",
-      "refersTo": "stat-row",
-      "description": "One quantified proof point: a decimal-aligned figure (fixed-width whole part, left-aligned suffix) and a caption.",
-      "html": "<div class=\"ds-stat\"><div class=\"ds-stat-figure\"><span class=\"ds-stat-whole\">50</span><span class=\"ds-stat-suffix\"></span></div><p class=\"ds-stat-caption\">invoices batched into a single IRB e-Invoice submission</p></div>",
-      "css": ".ds-stat { padding: 20px 0; } .ds-stat-figure { display: flex; align-items: baseline; } .ds-stat-whole { width: 5ch; text-align: right; font-size: 64px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; color: #062b8a; } .ds-stat-suffix { text-align: left; font-size: 64px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; color: #062b8a; } .ds-stat-caption { margin-top: 8px; font-size: 17px; color: #2a4a8f; }"
+      "name": "Core Focus Frame",
+      "kind": "container",
+      "description": "1px red-tinted frame with 6px red corner squares.",
+      "html": "<div class=\"ds-frame\"><span></span><span></span><span></span><span></span><p class=\"ds-eyebrow\">Core focus</p></div>",
+      "css": ".ds-frame { position:relative; border:1px solid rgba(239,68,68,0.4); padding:48px; } .ds-frame span { position:absolute; width:6px; height:6px; background:#ef4444; } .ds-frame span:nth-child(1){top:-3px;left:-3px} .ds-frame span:nth-child(2){top:-3px;right:-3px} .ds-frame span:nth-child(3){bottom:-3px;left:-3px} .ds-frame span:nth-child(4){bottom:-3px;right:-3px} .ds-eyebrow { color:#ef4444; font:600 11px Inter, sans-serif; letter-spacing:0.3em; text-transform:uppercase; }"
     },
     {
-      "name": "Scalloped Sheet",
+      "name": "Tag Chip",
+      "kind": "chip",
+      "description": "Feature tag: Surface fill, hairline border, 12px radius, 11px bold caps.",
+      "html": "<span class=\"ds-chip\">API Design</span>",
+      "css": ".ds-chip { display:inline-block; border-radius:12px; border:1px solid #262626; background:#0b0b0c; color:#fafafa; padding:14px 24px; font:700 11px Inter, sans-serif; letter-spacing:0.12em; text-transform:uppercase; }"
+    },
+    {
+      "name": "Experience Card",
       "kind": "card",
-      "refersTo": "sheet",
-      "description": "The About/Credentials panel: a fixed-width Manila sheet with a scalloped bottom edge, used for the letter and the credentials menu.",
-      "html": "<div class=\"ds-sheet\"><h2 class=\"ds-sheet-title\">A letter, from Jakarta</h2><p class=\"ds-sheet-body\">I'm a Software Engineer based in Jakarta…</p></div>",
-      "css": ".ds-sheet { position: relative; max-width: 640px; padding: 48px 40px; background: #ddd0b9; color: #062b8a; } .ds-sheet::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: -1px; height: 22px; background-image: radial-gradient(circle at 11px 0, #e6dbc7 11px, transparent 11.5px); background-size: 22px 22px; background-repeat: repeat-x; } .ds-sheet-title { font-size: 14px; font-weight: 500; } .ds-sheet-body { margin-top: 28px; font-size: 17px; line-height: 1.55; }"
+      "description": "Mono date tag over a Surface card with role, company, description, chips and a native details toggle.",
+      "html": "<div><span class=\"ds-date\">October 2024 - Present</span><article class=\"ds-card\"><h3>Software Engineer</h3><p>Nimbli · Jakarta</p></article></div>",
+      "css": ".ds-date { display:inline-block; border:1px solid #262626; background:#18181b; border-radius:6px; padding:6px 12px; font:400 11px 'JetBrains Mono', monospace; text-transform:uppercase; color:#a3a3a3; } .ds-card { margin-top:12px; border:1px solid #262626; background:#0b0b0c; border-radius:16px; padding:24px; color:#fafafa; font-family:Inter, sans-serif; } .ds-card p { color:#a3a3a3; font-size:14px; }"
     },
     {
-      "name": "Coupon",
-      "kind": "custom",
-      "refersTo": "coupon",
-      "description": "The Contact card: a cobalt coupon with top/bottom semicircle notches and a dotted perforation between the pitch and the form.",
-      "html": "<div class=\"ds-coupon\"><div class=\"ds-coupon-pitch\"><h2>Let&#39;s connect</h2><p>I usually reply within 24 hours.</p></div><div class=\"ds-coupon-form\"><input placeholder=\"Your name\"/><button class=\"ds-btn-ghost\">Send</button></div></div>",
-      "css": ".ds-coupon { position: relative; display: grid; grid-template-columns: 1fr 1fr; max-width: 896px; background: #062b8a; color: #e6dbc7; } .ds-coupon::before, .ds-coupon::after { content: \"\"; position: absolute; left: 46%; width: 28px; height: 28px; border-radius: 9999px; background: #e6dbc7; } .ds-coupon::before { top: -14px; } .ds-coupon::after { bottom: -14px; } .ds-coupon-pitch, .ds-coupon-form { padding: 48px; } .ds-coupon-pitch h2 { font-size: 32px; font-weight: 600; } .ds-coupon-pitch p { margin-top: 32px; font-size: 17px; } .ds-coupon-form input { display: block; width: 100%; min-height: 52px; margin-bottom: 10px; padding: 0 16px; background: #e6dbc7; color: #062b8a; border: none; font-size: 17px; }"
+      "name": "Certificate Card",
+      "kind": "card",
+      "description": "Off-white paper card with an inset frame, issuer, course title, Playfair name line and an initials seal. No 'verified' claims.",
+      "html": "<article class=\"ds-cert\"><b>Udemy</b><h3>The Complete JavaScript Course</h3><i>Arif Rahman Mubarok</i></article>",
+      "css": ".ds-cert { position:relative; background:#f4f4f2; color:#171717; border-radius:2px; padding:28px; outline:1px solid #d4d4d4; outline-offset:-12px; font-family:Inter, sans-serif; } .ds-cert b { color:#a435f0; font-weight:900; font-size:14px; } .ds-cert i { font-family:'Playfair Display', serif; font-size:18px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Open Folder",
-    "overview": "The site is built as the physical object its subject's own specialty would produce: a stack of filed folders you open through, and a ledger of figures and roles. The hero isn't a banner with a nav bar bolted on — the six section names *are* folder tabs, peeking out of a stack on a cobalt letterhead ground, with the front one already open. The idea traces straight back to the one fact that makes this candidate specific: he batches Malaysia's e-Invoice submissions and exports database records for a living, so the page itself is stationery — a letter, a ledger, a menu sheet, a coupon — not a generic component kit wearing his name.\n\nDensity follows the object it's imitating: the hero's folder stack is tight and tabbed, the ledger rows in \"Where I've worked\" are compact until opened, and the stat column reads like figures ruled into a page. Between those, full-bleed real pictures (an archival account-book cover, a 19th-century batik textile, a server rack, a muted typing loop) carry the \"paper and ink\" world further without ever standing in for a product shot he doesn't have. The palette is two tones doing every job: one cobalt ink, one sand paper, nothing else.",
+    "northStar": "The Lit Stage",
+    "overview": "A black stage with one soft spotlight: giant 900-weight stacked type in the hero, white fading to grey, then quieter grey detail, mono labels and hairlines, with a few saturated props (blue bolt, amber bracket, red corner marks, green live dot). Each section is its own set piece with its own motion. Layout and feel are adapted from a reference portfolio the owner chose, rebuilt from scratch with no copied code, copy or images; the content stays specific and factual.",
     "keyCharacteristics": [
-      "The page's own object-ness carries the identity: folders, scalloped letter sheets, a ledger table, a clip-out coupon, each a flat shape with real cut edges, never an outlined box.",
-      "One typeface (Switzer), one hue (Ledger Cobalt) against one paper tone (Folder Sand) and its two tonal steps (Manila, Manila Deep).",
-      "Every section is a structurally different composition from its neighbor; nothing repeats as a card grid.",
-      "Real, credited pictures of the subject's world appear at least once per section that has room for one, duotoned into the palette."
+      "Dark only: pure black ground, near-black surfaces, one off-white ink.",
+      "Inter at extreme weights does nearly everything; Playfair italic is the single expressive counterpoint, one phrase per headline.",
+      "Grey carries the supporting tier; saturated colour appears only in small props.",
+      "Every section has its own motion idea, built with CSS and small scroll handlers, with a reduced-motion path."
     ],
     "rules": [
-      { "name": "The Two-Tone Rule", "body": "The entire palette is Ledger Cobalt plus the Folder Sand/Manila family — no third hue, no tint derived from opacity. A new \"lighter\" or \"muted\" value is one of the two named tones or Muted Cobalt; it is never invented as rgba(ink, 0.4).", "section": "colors" },
-      { "name": "The Reversal Rule", "body": "Depth and hierarchy come from which surface is cobalt and which is sand, not from shadow or tint. A component never mixes the two directions; pick one reversal per surface.", "section": "colors" },
-      { "name": "The Decimal-Align Rule", "body": "Each stat's value is split at the first non-digit character into a whole part (right-aligned, fixed 5ch width) and a suffix/decimal part (left-aligned), so 3.7/4.0 sits in the same ruled column as 1,000+ without hand-kerning.", "section": "typography" },
-      { "name": "The Five-Step Rule", "body": "Display, Head, Figure, Lead, Body, Small — six named roles, but Figure only ever appears in one section. Every inline literal size should resolve to one of these.", "section": "typography" },
-      { "name": "The No-Shadow Rule", "body": "If a surface needs to look above another, it changes tone or changes which color is ground vs. ink — never a box-shadow, including as hover feedback on interactive elements.", "section": "elevation" },
-      { "name": "The Cut-Edge Rule", "body": "When a section boundary needs interest, the edge itself is shaped (a tab, a scallop, a notch, a dotted perforation) rather than decorated with a border, divider, or shadow.", "section": "shapes" }
+      {
+        "name": "The Spotlight Rule",
+        "body": "Colour is a prop, never a fill for whole sections. Saturated colour may cover an icon, dot, cube face or 1px line; large surfaces stay black, near-black or paper white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sheen Rule",
+        "body": "Display words that need depth use the .sheen white-to-grey text gradient, always beside a solid-white word so the fade reads as light, not as disabled.",
+        "section": "colors"
+      },
+      {
+        "name": "The One-Italic Rule",
+        "body": "A headline gets at most one Playfair italic phrase, the softer human half of the sentence. Never a whole heading in the serif.",
+        "section": "typography"
+      },
+      {
+        "name": "The Big-Then-Quiet Rule",
+        "body": "Each section has one shouting element; everything else steps down to body or label size.",
+        "section": "typography"
+      },
+      {
+        "name": "Sparing Shadows",
+        "body": "Shadows only where something physically sits over something else: the stats sheet, the back-to-top button and the paper work cards. Hover feedback is colour, border or a small translate.",
+        "section": "elevation"
+      },
+      {
+        "name": "Dim Contrast",
+        "body": "Dim was raised from #71717a to #85858e so it passes 4.5:1 on black, Surface and Surface Raised (4.85:1 at worst). Re-check all three surfaces before darkening it or adding a grey.",
+        "section": "colors"
+      }
     ],
     "dos": [
-      "Do keep the palette to exactly Ledger Cobalt, Muted Cobalt, Folder Sand, Manila, Manila Deep — five named values, no opacity-derived tints.",
-      "Do give every real photograph the shared .duotone filter before placing it; an un-toned photo breaks the one-world premise immediately.",
-      "Do shape an edge (tab, scallop, notch, perforation) when a section boundary needs interest; never reach for a border or shadow.",
-      "Do keep running text at Body size (17px+) or larger; Small is for metadata only."
+      "Do keep large surfaces black or near-black and spend colour on small props.",
+      "Do keep every claim factual and traceable to src/data/profile.ts.",
+      "Do give every new scroll or keyframe effect a reduced-motion path.",
+      "Do check new layouts at 390px for sideways scroll."
     ],
     "donts": [
-      "Don't reintroduce dark mode or a second theme — the object this page imitates has one ink, one paper, in the physical world.",
-      "Don't add a shadow anywhere, including as hover feedback; color/opacity only.",
-      "Don't use native <details>/<summary> for the next collapsible pattern without checking it first — the rendering environment used for this build did not hide closed-details content, which silently broke two inspector checks until the Ledger Row was rewritten as a real conditional render.",
-      "Don't add a sixth type-size step; fold a new size need into the nearest existing one first."
+      "Don't darken Dim below #85858e without re-checking AA contrast on every surface.",
+      "Don't copy text, images or code from the reference site.",
+      "Don't invent screenshots, testimonials or verification badges.",
+      "Don't reuse --font-* names for next/font variables; Tailwind v4's @theme owns them."
     ]
   }
 }

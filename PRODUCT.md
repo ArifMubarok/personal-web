@@ -20,15 +20,18 @@ His Malaysia IRB-compliant e-Invoice integration work is the differentiator a si
 
 ## Operating Context
 
-Site content is authored in [`docs/personal-web.md`](docs/personal-web.md) and structured into [`src/data/profile.ts`](src/data/profile.ts), which the components render. Next.js (App Router) static export, deployed to GitHub Pages at the custom domain `arifmubarok.my.id` via `.github/workflows` on push to `main`.
+Site content lives in [`src/data/profile.ts`](src/data/profile.ts), which the components render; it is the source of truth for everything on the page, including the redesign's section copy (hero lines, Core Focus, features, work cards, ribbons). [`docs/personal-web.md`](docs/personal-web.md) is the older authoring notes file and currently lags behind (it still names Alturian Indonesia rather than Nimbli). Next.js (App Router) static export, deployed to GitHub Pages at the custom domain `arifmubarok.my.id` via `.github/workflows` on push to `main`.
 
 ## Capabilities and Constraints
 
-- Static export only (`next build` → `out/`), Tailwind CSS, TypeScript, GitHub Pages hosting with a custom domain (CNAME).
-- Dark/light theme via `next-themes`; light is the default.
+- Static export only (`next build` → `out/`), Next.js 16 App Router, Tailwind CSS v4, TypeScript, GitHub Pages hosting with a custom domain (CNAME). Code is pushed to both `github` (GitHub, deploys) and `origin` (GitLab mirror).
+- Dark theme only; there is no theme toggle. The visual system is documented in [`DESIGN.md`](DESIGN.md).
+- No animation library: motion is CSS keyframes plus small scroll/IntersectionObserver handlers, and every effect respects `prefers-reduced-motion`.
+- Fonts are self-hosted at build time through `next/font` (Inter, Playfair Display, JetBrains Mono, Alex Brush); tech logos come from the `simple-icons` package. The page makes no runtime third-party requests.
 - English proficiency should read as "Professional working proficiency (written)" — strong written English, limited spoken practice.
 - Education duration (4 years) is intentionally not displayed, per Arif's preference; degree, school, honors, and GPA stay.
-- Resume link and employment history must stay synced to whichever CV revision is current (most recently `Arif_Rahman_Mubarok_Resume_7.pdf`); re-sync both whenever a newer CV supersedes it.
+- Resume link and employment history must stay synced to whichever CV revision is current; the latest sync renamed Alturian Indonesia → Nimbli. Re-sync both whenever a newer CV supersedes it.
+- Work-card years in `work` (`src/data/profile.ts`) are approximate placements within each role's tenure, not dates from the CV; confirm them before treating them as fact.
 
 ## Brand Commitments
 
@@ -36,10 +39,12 @@ Name: Arif Rahman Mubarok. Tagline stays "Software Engineer." Voice is direct an
 
 ## Evidence on Hand
 
-- Full work history and quantified achievements for three roles (Alturian Indonesia, Orbit360, CV. Gudang Media Perkasa) in `docs/personal-web.md` and `src/data/profile.ts`.
-- One project: Smart Edu-5P (repo: https://github.com/badaso404/smartedu5p).
+- Full work history and quantified achievements for three roles (Nimbli, Orbit360, CV. Gudang Media Perkasa) in `src/data/profile.ts`.
+- One personal project: Smart Edu-5P (repo: https://github.com/badaso404/smartedu5p). The Work section also presents four pieces of Nimbli work (IRB e-Invoice pipeline, reporting export pipeline, Loyalty program, HRIS attendance & payroll) as cards, using only facts from the CV bullets.
+- Five certifications (Udemy, Sololearn ×2, Dicoding ×2) and university achievements, shown as certificate-style cards. There are no certificate images or verification links, so the cards make no "verified" claim.
 - Resume PDF via Google Drive link (update when the CV revision changes).
-- Profile photo at `public/profile.jpg` / `docs/profile.jpeg`.
+- Profile photo at `public/profile.webp` (source: `docs/profile.jpeg`).
+- Two credited archival photos used in the Work section (Account Book Ledger, CC0; Servers in a Rack, CC BY-SA 3.0), listed in `public/img/credits.json`; their credit line in the footer must stay.
 - No testimonials, case studies, or press exist — do not fabricate any.
 
 ## Product Principles

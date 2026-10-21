@@ -1,5 +1,5 @@
 import { basicInfo, ribbons, socials } from "@/data/profile";
-import { GithubIcon, LayersIcon, LinkedinIcon, MailIcon } from "@/components/Icons";
+import { LayersIcon, LinkedinIcon, MailIcon } from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 
 function Ribbon({ items, className, reverse, speed }: { items: string[]; className: string; reverse?: boolean; speed: string }) {
@@ -72,7 +72,6 @@ export default function Contact() {
           </p>
           <div className="flex items-center gap-2">
             {[
-              { href: socials.github, label: "GitHub", icon: <GithubIcon className="size-4" /> },
               { href: socials.linkedin, label: "LinkedIn", icon: <LinkedinIcon className="size-4" /> },
               { href: `mailto:${basicInfo.email}`, label: "Email", icon: <MailIcon className="size-4" /> },
             ].map((l) => (
