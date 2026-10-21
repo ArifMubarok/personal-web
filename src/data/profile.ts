@@ -173,3 +173,158 @@ export const socials = {
   linkedin: "https://www.linkedin.com/in/arifrm",
   resume: "https://drive.google.com/file/d/1XgxKmApPg6TSJkssqh07Py79F0XVMbiL/view?usp=sharing",
 };
+
+// ---- Content for the dark editorial layout ----
+
+export const hero = {
+  intro: "Hi, I'm Arif Rahman Mubarok. I build retail and e-invoice systems that run at scale.",
+  aside: "Open to full-time roles and contract work, in Indonesia or remote.",
+  // Each line is split into [before, icon, after] so an icon can sit inside the word.
+  lines: [
+    { before: "BACKEND &", after: "" },
+    { before: "SOFT", icon: "bolt", after: "WARE" },
+    { before: "EN", icon: "bracket", after: "GINEER" },
+  ] as { before: string; icon?: "bolt" | "bracket"; after: string }[],
+  place: "Jakarta, ID",
+};
+
+export const coreFocus = {
+  quote: { strong: "Retail at scale.", muted: "Compliant by design.", italic: "hands-on engineering" },
+  lead: { before: "I build the", italic: "back-office systems", after: "that retail runs on, and keep them fast under load." },
+  columns: [
+    {
+      title: "Scope & Platform",
+      body: "POS, ERP (Merchandising and HRIS), and Loyalty platforms for clients in Indonesia and Malaysia, used by hundreds of thousands of customers.",
+      note: "Built for real stores, not demos.",
+    },
+    {
+      title: "Integration",
+      body: "Malaysia's IRB-compliant e-Invoice: structured data files in, batched submissions out, inside strict API payload limits.",
+    },
+  ],
+  signature: "Arif",
+};
+
+export const headlineStats = [
+  { label: "GPA", value: 3.7, decimals: 1, suffix: "/4.0" },
+  { label: "Professional exp", value: 3, decimals: 0, suffix: "+ Years" },
+  { label: "Records exported", value: 6, decimals: 0, suffix: "M+" },
+  { label: "Loyalty customers", value: 400, decimals: 0, suffix: "K+" },
+];
+
+export type Feature = {
+  title: string;
+  body: string;
+  tags: string[];
+  faces: { label: string; color: string }[];
+};
+
+export const features: Feature[] = [
+  {
+    title: "Retail Platforms",
+    body: "POS, ERP and Loyalty systems that stores depend on every day: cashier apps, stock and promotions, attendance and payroll, and a loyalty program with 400K+ active customers.",
+    tags: ["POS", "ERP", "Loyalty", "HRIS & Payroll", "Reporting", "E-Invoice"],
+    faces: [
+      { label: "POS", color: "#2563eb" },
+      { label: "ERP", color: "#7c3aed" },
+      { label: "LOYAL", color: "#ca8a04" },
+      { label: "HRIS", color: "#059669" },
+      { label: "INV", color: "#dc2626" },
+      { label: "RPT", color: "#0891b2" },
+    ],
+  },
+  {
+    title: "Scalable Backends",
+    body: "Backend-focused fullstack work in NestJS, Node and Laravel: APIs documented for the frontend team, pipelines that export 6M+ rows in under 10 minutes, and CPU use cut by 50–60%.",
+    tags: ["API Design", "NestJS", "Docker", "PostgreSQL", "Caching", "Nginx"],
+    faces: [
+      { label: "API", color: "#dc2626" },
+      { label: "SQL", color: "#ca8a04" },
+      { label: "NODE", color: "#16a34a" },
+      { label: "CACHE", color: "#0891b2" },
+      { label: "OPS", color: "#7c3aed" },
+      { label: "CODE", color: "#2563eb" },
+    ],
+  },
+  {
+    title: "Team Leadership",
+    body: "Leading up to 3 engineers across concurrent projects while staying hands-on: workload and task distribution, deadlines, and alignment with Operations and Project Management.",
+    tags: ["Team Lead", "Planning", "Code Review", "Requirements", "Communication", "Delivery"],
+    faces: [
+      { label: "TEAM", color: "#7c3aed" },
+      { label: "PLAN", color: "#ca8a04" },
+      { label: "SHIP", color: "#16a34a" },
+      { label: "TALK", color: "#2563eb" },
+      { label: "LEAD", color: "#dc2626" },
+      { label: "GOAL", color: "#0891b2" },
+    ],
+  },
+];
+
+export type Work = {
+  title: string;
+  category: string;
+  year: string;
+  summary: string;
+  detail: string;
+  image?: string;
+  imageAlt?: string;
+  visual?: string; // big word shown when there is no picture
+  link?: string;
+};
+
+export const work: Work[] = [
+  {
+    title: "IRB e-Invoice Bulk Pipeline",
+    category: "Integration · Nimbli",
+    year: "2024",
+    summary: "batched e-invoice submission for malaysia's irb.",
+    detail: "Replaced one-by-one filing with batched requests of up to 50 invoices, inside the API's payload limits.",
+    image: "/img/account-book-ledger.webp",
+    imageAlt: "A 19th-century account book ledger with handwritten columns",
+  },
+  {
+    title: "Reporting Export Pipeline",
+    category: "Data · Nimbli",
+    year: "2025",
+    summary: "6m+ database records exported in under 10 minutes.",
+    detail: "Scalable retrieval and processing strategies that keep datasets complete and consistent at volume.",
+    image: "/img/servers-in-a-rack.webp",
+    imageAlt: "Rack-mounted servers with blinking status lights",
+  },
+  {
+    title: "Loyalty Program",
+    category: "Retail · Nimbli",
+    year: "2025",
+    summary: "400k+ active customers, weekly free-item subscriptions.",
+    detail: "Built and scaled the loyalty platform, including a subscription that lets customers claim free items every week for up to a year.",
+    visual: "400K+",
+  },
+  {
+    title: "HRIS Attendance & Payroll",
+    category: "ERP · Malaysia",
+    year: "2025",
+    summary: "1,000+ concurrent attendance submissions, zero downtime.",
+    detail: "Attendance and payroll modules for the Malaysian market, with country-specific payroll rules and calculations.",
+    visual: "1,000+",
+  },
+  {
+    title: "Smart Edu-5P",
+    category: "Edtech · Team lead",
+    year: "2023",
+    summary: "project management app for teachers and students.",
+    detail: "Led the team and built the backend: 4+ features, plus the VPS, domain, DNS and deployment behind it.",
+    visual: "5P",
+    link: "https://github.com/badaso404/smartedu5p",
+  },
+];
+
+export const techStack: { row: string[] } [] = [
+  { row: ["NestJS", "Node.js", "TypeScript", "JavaScript", "Laravel", "PHP", "Angular", "Ionic", "TypeORM", "Express"] },
+  { row: ["PostgreSQL", "MySQL", "MongoDB", "Docker", "Cloudflare", "Nginx", "Git", "Linux", "Postman", "React"] },
+];
+
+export const ribbons = {
+  roles: ["Software Engineer", "Backend Engineer", "Fullstack Engineer", "Team Lead", "E-Invoice Integration"],
+  stack: ["NestJS", "Node.js", "TypeScript", "Laravel", "Angular", "PostgreSQL", "MySQL", "Docker", "Nginx"],
+};

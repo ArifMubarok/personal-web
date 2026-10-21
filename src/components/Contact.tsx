@@ -1,95 +1,102 @@
-"use client";
-
-import { useId, useState, type FormEvent } from "react";
-import { basicInfo, socials } from "@/data/profile";
+import { basicInfo, ribbons, socials } from "@/data/profile";
+import { GithubIcon, LayersIcon, LinkedinIcon, MailIcon } from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 
-export default function Contact() {
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
-  const nameId = useId();
-  const messageId = useId();
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Hello from ${name || "your site"}`);
-    const body = encodeURIComponent(message || "Hi Arif,");
-    window.location.href = `mailto:${basicInfo.email}?subject=${subject}&body=${body}`;
-  }
-
+function Ribbon({ items, className, reverse, speed }: { items: string[]; className: string; reverse?: boolean; speed: string }) {
+  const run = [...items, ...items, ...items, ...items];
   return (
-    <section
-      id="contact"
-      className="flex justify-center"
-      style={{ paddingTop: 64, paddingBottom: "var(--gap-section)", paddingInline: "var(--margin-outer)" }}
-    >
-      <Reveal
-        as="div"
-        className="coupon-notch grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2"
-        style={{ background: "var(--ink)", color: "var(--accent-ink)" }}
-      >
-        <div className="flex flex-col justify-between p-10 sm:p-12">
-          <h2 className="font-semibold" style={{ fontSize: "var(--step-head)" }}>
-            Let&rsquo;s connect
-          </h2>
-          <p className="mt-8" style={{ fontSize: "var(--step-body)" }}>
-            I usually reply within 24 hours, by email or LinkedIn.
-          </p>
+    <div className={`absolute -inset-x-20 overflow-hidden py-3 ${className}`} aria-hidden>
+      <div className="marquee" data-reverse={reverse ? "" : undefined} style={{ "--marquee-speed": speed } as React.CSSProperties}>
+        {[0, 1].map((half) => (
+          <span key={half} className="flex shrink-0">
+            {run.map((item, i) => (
+              <span key={`${half}-${i}`} className="flex items-center whitespace-nowrap">
+                <span className="px-4">{item}</span>
+                <span className="opacity-50">•</span>
+              </span>
+            ))}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Contact() {
+  return (
+    <section id="contact" className="relative overflow-hidden pt-56 pb-24 sm:pt-64">
+      <Ribbon
+        items={ribbons.stack}
+        speed="60s"
+        reverse
+        className="top-16 rotate-[4deg] bg-surface-2 font-mono text-sm font-medium uppercase text-dim"
+      />
+      <Ribbon
+        items={ribbons.roles}
+        speed="50s"
+        className="top-20 -rotate-[4deg] border-y border-line bg-bg text-sm font-bold uppercase tracking-[0.12em] text-ink"
+      />
+
+      <div className="relative text-center" style={{ paddingInline: "var(--margin-outer)" }}>
+        <Reveal as="h2" className="mx-auto text-[clamp(2.5rem,6vw,4.25rem)] font-black leading-[1.05] tracking-[-0.03em]">
+          Let&rsquo;s Build Something
+          <br />
+          <span className="text-muted">Reliable</span> Together
+        </Reveal>
+        <Reveal as="p" delay={100} className="mx-auto mt-6 max-w-[56ch] text-lg text-muted">
+          Open to full-time roles and contract work on backend systems, integrations and retail platforms. I usually reply
+          within 24 hours.
+        </Reveal>
+        <Reveal delay={200} className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
-            href={socials.linkedin}
+            href={`mailto:${basicInfo.email}`}
+            className="inline-flex items-center gap-3 rounded-full bg-ink px-10 py-5 text-lg font-bold text-bg transition-transform hover:-translate-y-0.5"
+          >
+            <MailIcon className="size-5" /> Hire Me
+          </a>
+          <a
+            href={socials.resume}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex min-h-11 w-fit items-center underline decoration-accent-ink/40 underline-offset-4 transition-colors hover:decoration-accent-ink"
-            style={{ fontSize: "var(--step-small)" }}
+            className="inline-flex items-center gap-3 rounded-full border border-line px-10 py-5 text-lg font-bold transition-colors hover:border-ink/50"
           >
-            linkedin.com/in/arifrm ↗
+            <LayersIcon className="size-5" /> View My Resume
           </a>
-        </div>
+        </Reveal>
+      </div>
 
-        <div className="relative flex flex-col justify-center gap-3 p-10 sm:p-12">
-          <div className="dotted-col absolute inset-y-0 left-0 hidden sm:block" aria-hidden />
-          <form onSubmit={handleSubmit} action={`mailto:${basicInfo.email}`} method="get" className="flex flex-col gap-3">
-            <div>
-              <label htmlFor={nameId} className="sr-only">
-                Your name
-              </label>
-              <input
-                id={nameId}
-                name="name"
-                type="text"
-                placeholder="Jane Tan…"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                autoComplete="name"
-                className="min-h-[52px] w-full px-4 placeholder:opacity-60"
-                style={{ background: "var(--accent-ink)", color: "var(--ink)", fontSize: "var(--step-body)" }}
-              />
-            </div>
-            <div>
-              <label htmlFor={messageId} className="sr-only">
-                What&rsquo;s this about?
-              </label>
-              <textarea
-                id={messageId}
-                name="message"
-                placeholder="A role, a project, just saying hi…"
-                rows={3}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="w-full resize-none px-4 py-3 placeholder:opacity-60"
-                style={{ background: "var(--accent-ink)", color: "var(--ink)", fontSize: "var(--step-body)" }}
-              />
-            </div>
-            <button
-              type="submit"
-              className="min-h-14 font-medium transition-opacity hover:opacity-85"
-              style={{ background: "var(--accent-ink)", color: "var(--ink)", fontSize: "var(--step-body)" }}
-            >
-              Send message
-            </button>
-          </form>
+      <footer className="relative mt-32" style={{ paddingInline: "var(--margin-outer)" }}>
+        <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-5 rounded-[28px] border border-line bg-surface px-8 py-7 sm:flex-row">
+          <p className="text-sm font-bold uppercase tracking-[0.15em]">
+            © {new Date().getFullYear()} {basicInfo.name}.
+          </p>
+          <div className="flex items-center gap-2">
+            {[
+              { href: socials.github, label: "GitHub", icon: <GithubIcon className="size-4" /> },
+              { href: socials.linkedin, label: "LinkedIn", icon: <LinkedinIcon className="size-4" /> },
+              { href: `mailto:${basicInfo.email}`, label: "Email", icon: <MailIcon className="size-4" /> },
+            ].map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                aria-label={l.label}
+                target={l.href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className="grid size-10 place-items-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-ink"
+              >
+                {l.icon}
+              </a>
+            ))}
+          </div>
         </div>
-      </Reveal>
+        <p className="credits mx-auto mt-6 max-w-[900px] text-center text-xs leading-relaxed text-dim">
+          Pictures:{" "}
+          <a href="https://www.metmuseum.org/art/collection/search/20365">&ldquo;Account Book Ledger&rdquo;</a> by John
+          Carlin, 1835–56, public domain (CC0), via The Metropolitan Museum of Art;{" "}
+          <a href="https://commons.wikimedia.org/wiki/File:Servers_in_a_Rack.jpg">&ldquo;Servers in a Rack&rdquo;</a> by
+          Abigor, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons.
+        </p>
+      </footer>
     </section>
   );
 }
