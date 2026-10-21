@@ -4,20 +4,36 @@ export const basicInfo = {
   location: "Jakarta Selatan, Indonesia",
   email: "arifrm28@gmail.com",
   phone: "+62 899-2600-0011",
-  photo: "/profile.jpg",
+  photo: "/profile.webp",
 };
 
 export const bio = {
   short:
-    "Software Engineer specializing in Malaysia's IRB-compliant e-Invoice integration, alongside retail systems — POS, ERP, and Loyalty platforms — used by hundreds of thousands of active customers.",
+    "Software Engineer specializing in Malaysia’s IRB-compliant e-Invoice integration, alongside retail systems — POS, ERP, and Loyalty platforms — used by hundreds of thousands of active customers.",
   long:
-    "I'm a Software Engineer based in Jakarta, currently leading a team of up to 3 engineers across concurrent retail projects spanning POS, ERP (Merchandising & HRIS), and Loyalty solutions for clients in Indonesia and Malaysia. A core focus of my work is Malaysia's IRB-compliant e-Invoice integration — from processing structured data files to architecting a bulk submission pipeline that batches up to 50 invoices per request, improving throughput while meeting strict regulatory constraints. I stay hands-on in development while managing team workload, task distribution, and cross-functional alignment with Operations and Project Management. My broader background spans backend-focused fullstack engineering, from digital library platforms handling large file uploads to POS systems serving real retail operations at scale.",
+    "I’m a Software Engineer based in Jakarta, currently leading a team of up to 3 engineers across concurrent retail projects spanning POS, ERP (Merchandising & HRIS), and Loyalty solutions for clients in Indonesia and Malaysia. A core focus of my work is Malaysia’s IRB-compliant e-Invoice integration — from processing structured data files to architecting a bulk submission pipeline that batches up to 50 invoices per request, improving throughput while meeting strict regulatory constraints. I stay hands-on in development while managing team workload, task distribution, and cross-functional alignment with Operations and Project Management. My broader background spans backend-focused fullstack engineering, from digital library platforms handling large file uploads to POS systems serving real retail operations at scale.",
+  letter: [
+    "I’m a Software Engineer based in Jakarta, currently leading a team of up to 3 engineers across concurrent retail projects spanning POS, ERP (Merchandising & HRIS), and Loyalty solutions for clients in Indonesia and Malaysia.",
+    "A core focus of my work is Malaysia’s IRB-compliant e-Invoice integration — from processing structured data files to architecting a bulk submission pipeline that batches up to 50 invoices per request, improving throughput while meeting strict regulatory constraints.",
+    "I stay hands-on in development while managing team workload, task distribution, and cross-functional alignment with Operations and Project Management.",
+    "My broader background spans backend-focused fullstack engineering, from digital library platforms handling large file uploads to POS systems serving real retail operations at scale.",
+  ],
 };
+
+export type Stat = { value: string; caption: string };
+
+export const stats: Stat[] = [
+  { value: "50", caption: "invoices batched into a single IRB e-Invoice submission, instead of filing one by one" },
+  { value: "6M+", caption: "database records exported by the reporting pipeline, in under 10 minutes" },
+  { value: "400K+", caption: "active customers on the Loyalty platform he built and scaled" },
+  { value: "1,000+", caption: "concurrent HRIS attendance submissions handled with zero downtime" },
+  { value: "3.7/4.0", caption: "GPA, D3 Informatics Engineering, Sebelas Maret University" },
+];
 
 export type Skill = { category: string; items: string[] };
 
 export const skills: Skill[] = [
-  { category: "Languages", items: ["Indonesian (Native)", "English (Work Proficiency)"] },
+  { category: "Languages", items: ["Indonesian (Native)", "English (Professional, written)"] },
   {
     category: "Frameworks / Libraries",
     items: ["NestJS", "NodeJS", "TypeScript", "JavaScript", "Laravel", "Angular", "Ionic", "TypeORM"],
@@ -39,32 +55,31 @@ export type ExperienceRole = {
 export type ExperienceEntry = {
   company: string;
   location: string;
+  highlight: string;
+  years: string;
   roles: ExperienceRole[];
 };
 
 export const experience: ExperienceEntry[] = [
   {
-    company: "Alturian Indonesia",
+    company: "Nimbli",
     location: "Jakarta Selatan, Indonesia",
+    highlight: "Batches IRB e-Invoice submissions 50 at a time; leads a 3-engineer team",
+    years: "2024—",
     roles: [
       {
         role: "Software Engineer",
         duration: "October 2024 - Present",
         description: [
-          "Led and managed a development team of up to 3 members while remaining hands-on in development, overseeing team workload, task distribution, and deadline adherence across multiple concurrent retail projects (POS, ERP – Merchandising & HRIS, and Loyalty solutions) for Indonesia-based clients",
-          "Developed and maintained ERP solutions with a focus on HRIS modules, including attendance and payroll systems tailored to the Malaysian market, delivering full-cycle features across both frontend and backend",
-          "Built a subscription feature for the Loyalty program (400k+ active customers) that lets customers purchase a subscription and claim free items every week for up to 1 year, and handled ongoing bug fixes",
-          "Optimized the ERP (Merchandising), Loyalty, and POS websites with lazy loading, caching, removal of unnecessary queries, and memoization, cutting CPU usage by 50-60%",
-          "Managed Malaysia e-Invoice integration projects, ensuring IRB-compliant data processing from structured data files",
-          "Collaborated cross-functionally with Operations and Project Management teams to gather, implement, and align deliverables with client requirements and timelines",
+          "Worked with Operations and Project Management teams to gather client requirements and align deliverables with timelines",
         ],
         achievements: [
-          "**Architected and optimized a bulk e-Invoice processing pipeline**, replacing one-by-one IRB submissions with batched requests of **up to 50 invoices**, improving transaction throughput while enforcing API payload and regulatory constraints.",
+          "**Led Malaysia e-Invoice integration and architected a bulk submission pipeline**, processing structured data files in line with IRB requirements and replacing one-by-one submissions with batched requests of **up to 50 invoices** while enforcing API payload limits.",
           "**Engineered a high-performance reporting pipeline** capable of exporting **6M+ database records in under 10 minutes**, using scalable data retrieval and processing strategies while ensuring complete and consistent datasets.",
-          "**Built and scaled a Loyalty Program serving 400K+ active customers**, designing backend workflows and data-processing mechanisms capable of handling large-scale customer transactions and activity.",
-          "**Led technical execution across the engineering team**, coordinating implementation, resolving technical dependencies, and driving delivery of multiple initiatives **within defined project deadlines**.",
-          "**Engineered the HRIS attendance module** to handle **1,000+ concurrent attendance submissions** with high availability and zero downtime, optimizing backend processing and database operations to maintain system stability during peak traffic.",
-          "**Engineered the HRIS payroll module for Malaysian payroll**, implementing complex country-specific payroll rules and calculations while maintaining accuracy, consistency, and reliability across payroll processing workflows.",
+          "**Built and scaled a Loyalty Program serving 400K+ active customers**, including a subscription feature that lets customers claim free items every week for up to 1 year.",
+          "**Engineered the HRIS attendance and payroll modules for the Malaysian market**, handling **1,000+ concurrent attendance submissions** with zero downtime and implementing country-specific payroll rules and calculations.",
+          "**Cut CPU usage by 50–60%** across the ERP (Merchandising), Loyalty, and POS websites with lazy loading, caching, removal of unnecessary queries, and memoization.",
+          "**Led a team of up to 3 engineers while staying hands-on**, owning workload, task distribution, and deadlines across concurrent retail projects (POS, ERP for Merchandising and HRIS, and Loyalty) for Indonesia-based clients.",
         ],
         techStack: ["Ionic", "Angular", "JavaScript", "TypeScript", "NodeJS", "PHP", "Laravel", "MySQL"],
       },
@@ -73,18 +88,16 @@ export const experience: ExperienceEntry[] = [
   {
     company: "Orbit360",
     location: "Solo, Indonesia",
+    highlight: "Digital library platform; optimized large e-book upload pipelines",
+    years: "2023–24",
     roles: [
       {
         role: "Software Engineer",
         duration: "November 2023 - October 2024",
         description: [
           "Built and maintained a digital library platform that manages e-books with large file sizes, ensuring reliable upload, storage, and delivery",
-          "Built API endpoints for frontend consumption across mobile and web, enabling seamless data integration and consistent functionality across both platforms",
-          "Documented APIs to support frontend development, providing clear reference material that streamlined collaboration between frontend and backend teams",
+          "Built API endpoints for the mobile and web frontends and documented them so the frontend team could build against them",
           "Deployed, secured, and containerized APIs, the frontend web app, and the database using Docker",
-        ],
-        achievements: [
-          "Handled large file uploads with optimized upload times, ensuring fast and reliable delivery of large e-book files.",
         ],
         techStack: ["TypeScript (strict mode)", "NodeJS", "NestJS", "Docker", "Cloudflare", "VPS", "Nginx", "PostgreSQL"],
       },
@@ -93,15 +106,15 @@ export const experience: ExperienceEntry[] = [
   {
     company: "CV. Gudang Media Perkasa",
     location: "Solo, Indonesia",
+    highlight: "Web-based POS system for retail transactions and inventory",
+    years: "2023",
     roles: [
       {
-        role: "Software Engineer",
+        role: "Software Engineer Intern",
         duration: "February 2023 - June 2023",
         description: [
-          "Implemented a web-based Point of Sales (POS) system tailored to the client's retail operations, covering transaction processing and inventory workflows",
-          "Built and secured APIs for the frontend side, applying authentication and validation to protect data exchange between client and server",
-          "Consumed APIs from the backend side to integrate transaction and inventory data into the POS interface",
-          "Worked with Git for version control to manage code changes and collaborate effectively within the development team",
+          "Implemented a Point of Sales (POS) system with a cashier web app, stock management, promotions, and sales reports",
+          "Built and secured APIs for the frontend side, consumed APIs from the backend side, and used Git for version control",
         ],
         techStack: ["PHP", "Laravel", "MySQL"],
       },
@@ -158,5 +171,5 @@ export const certifications: Certification[] = [
 export const socials = {
   github: "https://github.com/ArifMubarok",
   linkedin: "https://www.linkedin.com/in/arifrm",
-  resume: "https://drive.google.com/file/d/170m279FWDkjtTimDXn8EAi-m81lESkZK/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1XgxKmApPg6TSJkssqh07Py79F0XVMbiL/view?usp=sharing",
 };
